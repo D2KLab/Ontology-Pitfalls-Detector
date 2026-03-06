@@ -1,0 +1,14 @@
+rdflib
+nltk
+numpy
+scipy
+sentence-transformers
+scikit-learn
+tqdm
+langchain
+langchain-community
+transformers
+accelerate
+sentencepiece
+torch
+owlready2
