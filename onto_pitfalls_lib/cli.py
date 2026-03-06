@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Sequence, Tuple
+from typing import Any, Dict, List, Optional, Sequence
 
 from .runner import OntologyPatternToolkit
 from .utils import parse_pattern_selection
@@ -25,79 +25,42 @@ def _format_pitfall_taxonomy() -> str:
             current_category = category
 
         lines.append(
-            f"  {entry['pitfall_id']} ({entry['legacy_pattern']}): {entry['title']}"
+            f"  {entry['pitfall_id']}: {entry['title']}"
         )
-
-    mapped_patterns = {entry["legacy_pattern"] for entry in taxonomy}
-    unmapped_patterns = [
-        pattern_id
-        for pattern_id in OntologyPatternToolkit.available_patterns()
-        if pattern_id not in mapped_patterns
-    ]
-
-    if unmapped_patterns:
-        lines.append("")
-        lines.append("Unmapped legacy patterns:")
-        for pattern_id in unmapped_patterns:
-            lines.append(f"  {pattern_id}")
 
     return "\n".join(lines)
 
 
-def _reorganize_results(
-    selected_patterns: Sequence[str],
+def _group_results_by_category(
+    selected_pitfalls: Sequence[str],
     results: Dict[str, Dict[str, Any]],
-) -> Tuple[List[str], Dict[str, Dict[str, Any]], Dict[str, Dict[str, Dict[str, Any]]]]:
-    taxonomy = OntologyPatternToolkit.pitfall_taxonomy()
-    mapped_patterns = {entry["legacy_pattern"] for entry in taxonomy}
-    selected_set = set(selected_patterns)
-
-    selected_pitfalls: List[str] = []
-    pitfall_results: Dict[str, Dict[str, Any]] = {}
+) -> Dict[str, Dict[str, Dict[str, Any]]]:
+    taxonomy_by_id = {
+        entry["pitfall_id"]: entry for entry in OntologyPatternToolkit.pitfall_taxonomy()
+    }
     grouped_results: Dict[str, Dict[str, Dict[str, Any]]] = {}
 
-    for entry in taxonomy:
-        legacy_pattern = entry["legacy_pattern"]
-        if legacy_pattern not in selected_set:
+    for pitfall_id in selected_pitfalls:
+        entry = taxonomy_by_id.get(pitfall_id)
+        if entry is None:
             continue
 
         category = entry["category"]
-        pitfall_id = entry["pitfall_id"]
         payload_entry = {
-            "legacy_pattern": legacy_pattern,
             "title": entry["title"],
-            "result": results[legacy_pattern],
+            "result": results[pitfall_id],
         }
-
-        selected_pitfalls.append(pitfall_id)
-        pitfall_results[pitfall_id] = payload_entry
 
         if category not in grouped_results:
             grouped_results[category] = {}
         grouped_results[category][pitfall_id] = payload_entry
 
-    unmapped_selected = [
-        pattern_id for pattern_id in selected_patterns if pattern_id not in mapped_patterns
-    ]
-    if unmapped_selected:
-        category = "Unmapped Legacy Issues"
-        grouped_results[category] = {}
-        for pattern_id in unmapped_selected:
-            payload_entry = {
-                "legacy_pattern": pattern_id,
-                "title": "Legacy pattern without taxonomy mapping",
-                "result": results[pattern_id],
-            }
-            selected_pitfalls.append(pattern_id)
-            pitfall_results[pattern_id] = payload_entry
-            grouped_results[category][pattern_id] = payload_entry
-
-    return selected_pitfalls, pitfall_results, grouped_results
+    return grouped_results
 
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Run ontology toolkit pitfall checks (legacy P1-P19 and mapped P1.1-P4.7).",
+        description="Run ontology toolkit pitfall checks using taxonomy IDs (P1.1-P4.7).",
     )
     parser.add_argument(
         "--ontology",
@@ -107,7 +70,7 @@ def _build_parser() -> argparse.ArgumentParser:
         "--patterns",
         nargs="+",
         default=["all"],
-        help="Pitfalls to run, e.g. P1.1 P2.3 or legacy P4 P6; use all to run every legacy pattern.",
+        help="Pitfalls to run, e.g. P1.1 P2.3 P4.6; use all to run every pitfall.",
     )
     parser.add_argument(
         "--model",
@@ -148,26 +111,24 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     toolkit = OntologyPatternToolkit(str(ontology_path), model_name=args.model)
 
     try:
-        selected_patterns = parse_pattern_selection(
+        selected_pitfalls = parse_pattern_selection(
             args.patterns,
             toolkit.available_patterns(),
-            normalizer=OntologyPatternToolkit.resolve_pattern_id,
+            normalizer=OntologyPatternToolkit.normalize_pitfall_id,
         )
     except ValueError as exc:
         parser.error(str(exc))
 
-    results = {pattern_id: toolkit.run_pattern(pattern_id) for pattern_id in selected_patterns}
-    selected_pitfalls, pitfall_results, grouped_results = _reorganize_results(
-        selected_patterns,
+    results = {pitfall_id: toolkit.run_pattern(pitfall_id) for pitfall_id in selected_pitfalls}
+    grouped_results = _group_results_by_category(
+        selected_pitfalls,
         results,
     )
 
     payload = {
         "metadata": toolkit.metadata(),
-        "selected_patterns": selected_patterns,
         "selected_pitfalls": selected_pitfalls,
         "results": results,
-        "pitfall_results": pitfall_results,
         "grouped_results": grouped_results,
     }
 

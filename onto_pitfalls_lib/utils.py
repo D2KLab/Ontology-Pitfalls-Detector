@@ -65,8 +65,20 @@ def normalize_pattern_id(raw_id: str) -> str:
     return f"P{int(token)}"
 
 
+def _pattern_sort_key(pattern_id: str) -> tuple[int, ...]:
+    token = str(pattern_id).strip().upper().rstrip(".")
+    if token.startswith("P"):
+        token = token[1:]
+
+    parts = token.split(".")
+    if any(not part.isdigit() for part in parts):
+        raise ValueError(f"Invalid pattern identifier: {pattern_id}")
+
+    return tuple(int(part) for part in parts)
+
+
 def sort_pattern_ids(pattern_ids: Sequence[str]) -> List[str]:
-    return sorted(pattern_ids, key=lambda pattern_id: int(pattern_id[1:]))
+    return sorted(pattern_ids, key=_pattern_sort_key)
 
 
 def parse_pattern_selection(

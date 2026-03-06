@@ -18,153 +18,135 @@ from .utils import (
     extract_label,
     flatten,
     normalize_name,
-    normalize_pattern_id,
     parse_pattern_selection,
+    sort_pattern_ids,
 )
 
 PITFALL_TAXONOMY = (
     {
         "category": "Logical Issues",
         "pitfall_id": "P1.1",
-        "legacy_pattern": "P4",
         "title": "Parent disjoint with children",
     },
     {
         "category": "Logical Issues",
         "pitfall_id": "P1.2",
-        "legacy_pattern": "P9",
         "title": "Entity as subclass of both parent and grandparent",
     },
     {
         "category": "Logical Issues",
         "pitfall_id": "P1.3",
-        "legacy_pattern": "P19",
         "title": "Logical inconsistencies",
     },
     {
         "category": "Structural Issues",
         "pitfall_id": "P2.1",
-        "legacy_pattern": "P2",
         "title": "Not connected hierarchies",
     },
     {
         "category": "Structural Issues",
         "pitfall_id": "P2.2",
-        "legacy_pattern": "P5",
         "title": "Single subclass parent",
     },
     {
         "category": "Structural Issues",
         "pitfall_id": "P2.3",
-        "legacy_pattern": "P6",
         "title": "Superfluous disjointness",
     },
     {
         "category": "Structural Issues",
         "pitfall_id": "P2.4",
-        "legacy_pattern": "P13",
         "title": "Single subproperty parent",
     },
     {
         "category": "Structural Issues",
         "pitfall_id": "P2.5",
-        "legacy_pattern": "P14",
         "title": "Range/Domain expansion",
     },
     {
         "category": "Structural Issues",
         "pitfall_id": "P2.6",
-        "legacy_pattern": "P12",
         "title": "Possible hierarchy among properties",
     },
     {
         "category": "Redundancy / Naming Issues",
         "pitfall_id": "P3.1",
-        "legacy_pattern": "P15",
         "title": "Properties replicating standard RDF ones",
     },
     {
         "category": "Redundancy / Naming Issues",
         "pitfall_id": "P3.2",
-        "legacy_pattern": "P17",
         "title": "Range in property title",
     },
     {
         "category": "Redundancy / Naming Issues",
         "pitfall_id": "P3.3",
-        "legacy_pattern": "P18",
         "title": "Domain in property title",
     },
     {
         "category": "Semantic Issues",
         "pitfall_id": "P4.1",
-        "legacy_pattern": "P1",
         "title": "Overly generic classes",
     },
     {
         "category": "Semantic Issues",
         "pitfall_id": "P4.2",
-        "legacy_pattern": "P3",
         "title": "Synonyms in superclasses",
     },
     {
         "category": "Semantic Issues",
         "pitfall_id": "P4.3",
-        "legacy_pattern": "P7",
         "title": "Conflicting hierarchy",
     },
     {
         "category": "Semantic Issues",
         "pitfall_id": "P4.4",
-        "legacy_pattern": "P8",
         "title": "Subclasses with same semantics as superclasses",
     },
     {
         "category": "Semantic Issues",
         "pitfall_id": "P4.5",
-        "legacy_pattern": "P10",
         "title": "Synonyms in properties",
     },
     {
         "category": "Semantic Issues",
         "pitfall_id": "P4.6",
-        "legacy_pattern": "P11",
         "title": "Inverse properties not declared",
     },
     {
         "category": "Semantic Issues",
         "pitfall_id": "P4.7",
-        "legacy_pattern": "P16",
         "title": "DataProperties that can become ObjectProperties",
     },
 )
 
+PITFALL_RUN_METHODS = {
+    "P1.1": "run_p1_1",
+    "P1.2": "run_p1_2",
+    "P1.3": "run_p1_3",
+    "P2.1": "run_p2_1",
+    "P2.2": "run_p2_2",
+    "P2.3": "run_p2_3",
+    "P2.4": "run_p2_4",
+    "P2.5": "run_p2_5",
+    "P2.6": "run_p2_6",
+    "P3.1": "run_p3_1",
+    "P3.2": "run_p3_2",
+    "P3.3": "run_p3_3",
+    "P4.1": "run_p4_1",
+    "P4.2": "run_p4_2",
+    "P4.3": "run_p4_3",
+    "P4.4": "run_p4_4",
+    "P4.5": "run_p4_5",
+    "P4.6": "run_p4_6",
+    "P4.7": "run_p4_7",
+}
+
 PITFALL_BY_ID = {entry["pitfall_id"]: entry for entry in PITFALL_TAXONOMY}
-PITFALL_BY_PATTERN = {entry["legacy_pattern"]: entry for entry in PITFALL_TAXONOMY}
 
 
 class OntologyPatternToolkit:
-    PATTERN_METHODS = {
-        "P1": "run_p1",
-        "P2": "run_p2",
-        "P3": "run_p3",
-        "P4": "run_p4",
-        "P5": "run_p5",
-        "P6": "run_p6",
-        "P7": "run_p7",
-        "P8": "run_p8",
-        "P9": "run_p9",
-        "P10": "run_p10",
-        "P11": "run_p11",
-        "P12": "run_p12",
-        "P13": "run_p13",
-        "P14": "run_p14",
-        "P15": "run_p15",
-        "P16": "run_p16",
-        "P17": "run_p17",
-        "P18": "run_p18",
-        "P19": "run_p19",
-    }
+    PATTERN_METHODS = dict(PITFALL_RUN_METHODS)
 
     def __init__(self, ontology_path: str, model_name: str = "all-MiniLM-L6-v2") -> None:
         self.ontology_path = Path(ontology_path).expanduser().resolve()
@@ -195,42 +177,26 @@ class OntologyPatternToolkit:
 
     @classmethod
     def available_patterns(cls) -> List[str]:
-        return sorted(cls.PATTERN_METHODS.keys(), key=lambda x: int(x[1:]))
+        return sort_pattern_ids([entry["pitfall_id"] for entry in PITFALL_TAXONOMY])
 
     @classmethod
     def pitfall_taxonomy(cls) -> List[Dict[str, str]]:
         return [dict(entry) for entry in PITFALL_TAXONOMY]
 
     @classmethod
-    def resolve_pattern_id(cls, raw_id: str) -> str:
+    def normalize_pitfall_id(cls, raw_id: str) -> str:
         token = str(raw_id).strip().upper().rstrip(".")
         if not token:
-            raise ValueError("Pattern identifier cannot be empty.")
+            raise ValueError("Pitfall identifier cannot be empty.")
 
         if token == "ALL":
             return token
 
-        mapped = PITFALL_BY_ID.get(token)
-        if mapped is not None:
-            return mapped["legacy_pattern"]
+        if token not in PITFALL_BY_ID:
+            options = ", ".join(cls.available_patterns())
+            raise ValueError(f"Unknown pitfall '{raw_id}'. Available: {options}")
 
-        return normalize_pattern_id(token)
-
-    @classmethod
-    def pitfall_for_pattern(cls, pattern_id: str) -> Optional[Dict[str, str]]:
-        normalized = normalize_pattern_id(pattern_id)
-        pitfall = PITFALL_BY_PATTERN.get(normalized)
-        if pitfall is None:
-            return None
-        return dict(pitfall)
-
-    @classmethod
-    def pitfall_id_for_pattern(cls, pattern_id: str) -> str:
-        normalized = normalize_pattern_id(pattern_id)
-        pitfall = PITFALL_BY_PATTERN.get(normalized)
-        if pitfall is None:
-            return normalized
-        return pitfall["pitfall_id"]
+        return token
 
     def metadata(self) -> Dict[str, Any]:
         return {
@@ -444,26 +410,29 @@ class OntologyPatternToolkit:
         }
 
     def run_pattern(self, pattern_id: str) -> Dict[str, Any]:
-        normalized = self.resolve_pattern_id(pattern_id)
-        method_name = self.PATTERN_METHODS.get(normalized)
+        pitfall_id = self.normalize_pitfall_id(pattern_id)
+        if pitfall_id == "ALL":
+            raise ValueError("Use run_all() or run_patterns(['all']) to run all pitfalls.")
+
+        method_name = self.PATTERN_METHODS.get(pitfall_id)
         if method_name is None:
             available = ", ".join(self.available_patterns())
-            raise ValueError(f"Unknown pattern '{pattern_id}'. Available: {available}")
+            raise ValueError(f"Unknown pitfall '{pattern_id}'. Available: {available}")
 
         return getattr(self, method_name)()
 
     def run_patterns(self, pattern_ids: Sequence[str]) -> Dict[str, Dict[str, Any]]:
-        selected_patterns = parse_pattern_selection(
+        selected_pitfalls = parse_pattern_selection(
             pattern_ids,
             self.available_patterns(),
-            normalizer=self.resolve_pattern_id,
+            normalizer=self.normalize_pitfall_id,
         )
-        return {pattern_id: self.run_pattern(pattern_id) for pattern_id in selected_patterns}
+        return {pitfall_id: self.run_pattern(pitfall_id) for pitfall_id in selected_pitfalls}
 
     def run_all(self) -> Dict[str, Dict[str, Any]]:
         return self.run_patterns(["all"])
 
-    def run_p1(self) -> Dict[str, Any]:
+    def run_p4_1(self) -> Dict[str, Any]:
         ensure_nltk_resource("corpora/wordnet", "wordnet")
 
         concept_synsets = wn.synsets("concept")
@@ -524,7 +493,7 @@ class OntologyPatternToolkit:
             "distance_buckets": buckets,
         }
 
-    def run_p2(self) -> Dict[str, Any]:
+    def run_p2_1(self) -> Dict[str, Any]:
         split_labels = {
             cls_uri: camel_case_split(extract_label(cls_uri))
             for cls_uri in self.oclasses
@@ -577,7 +546,7 @@ class OntologyPatternToolkit:
             "items": mismatches,
         }
 
-    def run_p3(self, threshold: float = 0.8, top_k_per_class: int = 3) -> Dict[str, Any]:
+    def run_p4_2(self, threshold: float = 0.8, top_k_per_class: int = 3) -> Dict[str, Any]:
         ctx = self._class_similarity_context()
         label_sim = ctx["label_similarity"]
         desc_sim = ctx["description_similarity"]
@@ -617,7 +586,7 @@ class OntologyPatternToolkit:
             "items": items,
         }
 
-    def run_p4(self) -> Dict[str, Any]:
+    def run_p1_1(self) -> Dict[str, Any]:
         results = []
         seen = set()
 
@@ -652,7 +621,7 @@ class OntologyPatternToolkit:
             "items": results,
         }
 
-    def run_p5(self) -> Dict[str, Any]:
+    def run_p2_2(self) -> Dict[str, Any]:
         superclasses = [
             c for c in self.oclasses if any(True for _ in self.graph.subjects(RDFS.subClassOf, c))
         ]
@@ -674,7 +643,7 @@ class OntologyPatternToolkit:
             "items": items,
         }
 
-    def run_p6(self, min_similarity: float = 0.6, top_k: int = 20) -> Dict[str, Any]:
+    def run_p2_3(self, min_similarity: float = 0.6, top_k: int = 20) -> Dict[str, Any]:
         pairs: List[Tuple[URIRef, URIRef]] = []
         seen = set()
 
@@ -727,7 +696,7 @@ class OntologyPatternToolkit:
             "items": filtered,
         }
 
-    def run_p7(
+    def run_p4_3(
         self,
         sim_threshold: float = 0.1,
         polarity_threshold: float = 0.3,
@@ -782,7 +751,7 @@ class OntologyPatternToolkit:
             "items": items,
         }
 
-    def run_p8(self, sim_threshold: float = 0.8) -> Dict[str, Any]:
+    def run_p4_4(self, sim_threshold: float = 0.8) -> Dict[str, Any]:
         ctx = self._class_similarity_context()
         combined_sim = ctx["combined_similarity"]
         uri_to_idx = {uri: idx for idx, uri in enumerate(self.oclasses)}
@@ -840,7 +809,7 @@ class OntologyPatternToolkit:
             "items": candidates,
         }
 
-    def run_p9(self) -> Dict[str, Any]:
+    def run_p1_2(self) -> Dict[str, Any]:
         triples = set()
 
         for child, parent in self.graph.subject_objects(RDFS.subClassOf):
@@ -874,7 +843,7 @@ class OntologyPatternToolkit:
             "items": items,
         }
 
-    def run_p10(self, threshold: float = 0.8, max_results: int = 50) -> Dict[str, Any]:
+    def run_p4_5(self, threshold: float = 0.8, max_results: int = 50) -> Dict[str, Any]:
         ctx = self._property_similarity_context()
         candidates = self._p10_candidates(threshold)
 
@@ -906,7 +875,7 @@ class OntologyPatternToolkit:
             "items": items,
         }
 
-    def run_p11(self, threshold: float = 0.8) -> Dict[str, Any]:
+    def run_p4_6(self, threshold: float = 0.8) -> Dict[str, Any]:
         prop_domain, prop_range = self._property_domain_range()
         threshold_candidates = self._p10_candidates(threshold)
 
@@ -945,7 +914,7 @@ class OntologyPatternToolkit:
             "items": potential_inverses,
         }
 
-    def run_p12(self, threshold: float = 0.8) -> Dict[str, Any]:
+    def run_p2_6(self, threshold: float = 0.8) -> Dict[str, Any]:
         prop_domain, prop_range = self._property_domain_range()
         threshold_candidates = self._p10_candidates(threshold)
 
@@ -1014,7 +983,7 @@ class OntologyPatternToolkit:
             "items": filtered_potential_siblings,
         }
 
-    def run_p13(self) -> Dict[str, Any]:
+    def run_p2_4(self) -> Dict[str, Any]:
         superproperties = [
             p for p in self.all_props if any(True for _ in self.graph.subjects(RDFS.subPropertyOf, p))
         ]
@@ -1038,7 +1007,7 @@ class OntologyPatternToolkit:
             "items": items,
         }
 
-    def run_p14(self) -> Dict[str, Any]:
+    def run_p2_5(self) -> Dict[str, Any]:
         p14_prop_domain = {p: set(self.graph.objects(p, RDFS.domain)) for p in self.oobjprops}
         p14_prop_range = {p: set(self.graph.objects(p, RDFS.range)) for p in self.oobjprops}
 
@@ -1110,7 +1079,7 @@ class OntologyPatternToolkit:
             "multi_range_items": sorted(multi_range_same_super, key=lambda x: x["property_label"]),
         }
 
-    def run_p15(self) -> Dict[str, Any]:
+    def run_p3_1(self) -> Dict[str, Any]:
         standard_property_labels = {
             "rdf": list(getattr(RDF, "__annotations__", {}).keys()),
             "rdfs": list(getattr(RDFS, "__annotations__", {}).keys()),
@@ -1157,7 +1126,7 @@ class OntologyPatternToolkit:
             "items": name_matches,
         }
 
-    def run_p16(self) -> Dict[str, Any]:
+    def run_p4_7(self) -> Dict[str, Any]:
         prop_labels_raw = {p: extract_label(p, clean=False) for p in self.odataprops}
         prop_labels_norm = {p: normalize_name(label) for p, label in prop_labels_raw.items()}
 
@@ -1192,7 +1161,7 @@ class OntologyPatternToolkit:
             "items": overlap_pairs,
         }
 
-    def run_p17(self) -> Dict[str, Any]:
+    def run_p3_2(self) -> Dict[str, Any]:
         range_in_title = []
 
         for prop in self.oobjprops:
@@ -1221,7 +1190,7 @@ class OntologyPatternToolkit:
             "items": range_in_title,
         }
 
-    def run_p18(self) -> Dict[str, Any]:
+    def run_p3_3(self) -> Dict[str, Any]:
         domain_in_title = []
 
         for prop in self.oobjprops:
@@ -1250,7 +1219,7 @@ class OntologyPatternToolkit:
             "items": domain_in_title,
         }
 
-    def run_p19(self) -> Dict[str, Any]:
+    def run_p1_3(self) -> Dict[str, Any]:
         ontology_uris = [s for s in self.graph.subjects(RDF.type, OWL.Ontology)]
         ontology_uri = str(ontology_uris[0]) if ontology_uris else self.ontology_path.as_uri()
 
