@@ -471,6 +471,8 @@ class OntologyPatternToolkit:
             distance_from_abs_entity = hpath.index(wn_abs_entity) if wn_abs_entity in hpath else 999
 
             score = min(distance_from_concept, distance_from_entity, distance_from_abs_entity)
+            if int(score) > 2:
+                continue
             scores.append(
                 {
                     "class_uri": str(cls_uri),
