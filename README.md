@@ -95,6 +95,22 @@ Use compact JSON (single line):
 python -m onto_pitfalls_lib --patterns P1.1 --compact
 ```
 
+## Compare Multiple JSON Outputs
+
+You can compare numeric pitfall counts across all JSON files in `output/` and export a CSV containing all taxonomy pitfalls (`P1.1` to `P4.7`) plus a harmonic mean row:
+
+```bash
+python compare_pitfall_scores.py
+```
+
+Custom paths:
+
+```bash
+python compare_pitfall_scores.py \
+  --input-dir output \
+  --output output/pitfall_score_comparison.csv
+```
+
 ### Backward Compatibility
 
 The old entrypoint still works:

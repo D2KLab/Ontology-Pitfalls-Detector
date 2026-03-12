@@ -156,10 +156,12 @@ class OntologyPatternToolkit:
         self.graph = Graph()
         self.graph.parse(str(self.ontology_path))
 
+        all_classes = list(self.graph.subjects(RDF.type, OWL.Class)) + list(self.graph.subjects(RDF.type, RDFS.Class))
         self.oclasses = sorted(
-            [c for c in self.graph.subjects(RDF.type, OWL.Class) if isinstance(c, URIRef)],
+            [c for c in all_classes if isinstance(c, URIRef)],
             key=str,
         )
+
         self.oobjprops = sorted(
             [p for p in self.graph.subjects(RDF.type, OWL.ObjectProperty) if isinstance(p, URIRef)],
             key=str,
@@ -168,6 +170,11 @@ class OntologyPatternToolkit:
             [p for p in self.graph.subjects(RDF.type, OWL.DatatypeProperty) if isinstance(p, URIRef)],
             key=str,
         )
+        rdf_properties = set(self.graph.subjects(RDF.type, RDF.Property))
+        rdf_properties_range = [list(self.graph.objects(r, RDFS.range))[0] for r in rdf_properties]
+        self.oobjprops += [r[0] for r in zip(rdf_properties,rdf_properties_range) if isinstance(r[1], URIRef)]
+        self.odataprops += [r for r in rdf_properties if r not in self.oobjprops]
+
         self.all_props = self.oobjprops + self.odataprops
 
         self.model_name = model_name
@@ -489,8 +496,10 @@ class OntologyPatternToolkit:
             bucket = str(item["distance"])
             buckets.setdefault(bucket, []).append(item["class_label"])
 
+        ratio = len(scores) / len(self.oclasses) if self.oclasses else 0.0
         return {
             "count": len(scores),
+            "ratio": ratio,
             "items": scores,
             "distance_buckets": buckets,
         }
@@ -543,8 +552,10 @@ class OntologyPatternToolkit:
                     }
                 )
 
+        ratio = len(mismatches) / len(self.oclasses) if self.oclasses else 0.0
         return {
             "count": len(mismatches),
+            "ratio": ratio,
             "items": mismatches,
         }
 
@@ -582,9 +593,11 @@ class OntologyPatternToolkit:
 
         items.sort(key=lambda x: x["combined_similarity"], reverse=True)
 
+        ratio = len(items) / len(self.oclasses) if self.oclasses else 0.0
         return {
             "threshold": threshold,
             "count": len(items),
+            "ratio": ratio,
             "items": items,
         }
 
@@ -618,8 +631,10 @@ class OntologyPatternToolkit:
                 }
             )
 
+        ratio = len(results) / len(self.oclasses) if self.oclasses else 0.0
         return {
             "count": len(results),
+            "ratio": ratio,
             "items": results,
         }
 
@@ -640,8 +655,10 @@ class OntologyPatternToolkit:
             for cls_uri in singlechild_superclasses
         ]
 
+        ratio = len(items) / len(self.oclasses) if self.oclasses else 0.0
         return {
             "count": len(items),
+            "ratio": ratio,
             "items": items,
         }
 
@@ -692,9 +709,11 @@ class OntologyPatternToolkit:
         if top_k > 0:
             filtered = filtered[:top_k]
 
+        ratio = len(filtered) / len(self.oclasses) if self.oclasses else 0.0
         return {
             "min_similarity": min_similarity,
             "count": len(filtered),
+            "ratio": ratio,
             "items": filtered,
         }
 
@@ -746,10 +765,12 @@ class OntologyPatternToolkit:
                 }
             )
 
+        ratio = len(items) / len(self.oclasses) if self.oclasses else 0.0
         return {
             "sim_threshold": sim_threshold,
             "polarity_threshold": polarity_threshold,
             "count": len(items),
+            "ratio": ratio,
             "items": items,
         }
 
@@ -805,9 +826,11 @@ class OntologyPatternToolkit:
 
         candidates = sorted(candidates, key=lambda x: x["semantic_similarity"], reverse=True)
 
+        ratio = len(candidates) / len(self.oclasses) if self.oclasses else 0.0
         return {
             "sim_threshold": sim_threshold,
             "count": len(candidates),
+            "ratio": ratio,
             "items": candidates,
         }
 
@@ -840,8 +863,10 @@ class OntologyPatternToolkit:
             for child, parent, grandparent in sorted(triples, key=lambda x: (str(x[0]), str(x[1]), str(x[2])))
         ]
 
+        ratio = len(items) / len(self.oclasses) if self.oclasses else 0.0
         return {
             "count": len(items),
+            "ratio": ratio,
             "items": items,
         }
 
@@ -869,11 +894,13 @@ class OntologyPatternToolkit:
             for x in visible
         ]
 
+        ratio = len(items) / len(self.all_props) if self.all_props else 0.0
         return {
             "threshold": threshold,
             "quantiles": ctx["quantiles"],
             "total_count": len(candidates),
             "returned_count": len(items),
+            "ratio": ratio,
             "items": items,
         }
 
@@ -910,9 +937,11 @@ class OntologyPatternToolkit:
                     }
                 )
 
+        ratio = len(potential_inverses) / len(self.all_props) if self.all_props else 0.0
         return {
             "threshold": threshold,
             "count": len(potential_inverses),
+            "ratio": ratio,
             "items": potential_inverses,
         }
 
@@ -977,11 +1006,15 @@ class OntologyPatternToolkit:
             else:
                 filtered_potential_siblings.append(record)
 
+        ratio = len(filtered_potential_siblings) / len(self.all_props) if self.all_props else 0.0
+        already_siblings_ratio = len(already_siblings) / len(self.all_props) if self.all_props else 0.0
         return {
             "threshold": threshold,
             "already_sibling_count": len(already_siblings),
+            "already_siblings_ratio": already_siblings_ratio,
             "already_siblings": already_siblings,
             "count": len(filtered_potential_siblings),
+            "ratio": ratio,
             "items": filtered_potential_siblings,
         }
 
@@ -1004,8 +1037,10 @@ class OntologyPatternToolkit:
             for prop in singlechild_superproperties
         ]
 
+        ratio = len(items) / len(self.all_props) if self.all_props else 0.0
         return {
             "count": len(items),
+            "ratio": ratio,
             "items": items,
         }
 
@@ -1074,10 +1109,14 @@ class OntologyPatternToolkit:
                         }
                     )
 
+        multi_domain_ratio = len(multi_domain_same_super) / len(self.oobjprops) if self.oobjprops else 0.0
+        multi_range_ratio = len(multi_range_same_super) / len(self.oobjprops) if self.oobjprops else 0.0
         return {
             "multi_domain_count": len(multi_domain_same_super),
+            "multi_domain_ratio": multi_domain_ratio,
             "multi_domain_items": sorted(multi_domain_same_super, key=lambda x: x["property_label"]),
             "multi_range_count": len(multi_range_same_super),
+            "multi_range_ratio": multi_range_ratio,
             "multi_range_items": sorted(multi_range_same_super, key=lambda x: x["property_label"]),
         }
 
@@ -1122,9 +1161,11 @@ class OntologyPatternToolkit:
 
         name_matches = sorted(name_matches, key=lambda x: x["property_label"].lower())
 
+        ratio = len(name_matches) / len(self.all_props) if self.all_props else 0.0
         return {
             "checked_count": len(self.all_props),
             "count": len(name_matches),
+            "ratio": ratio,
             "items": name_matches,
         }
 
@@ -1158,8 +1199,10 @@ class OntologyPatternToolkit:
 
         overlap_pairs = sorted(overlap_pairs, key=lambda x: (x["short_label"].lower(), x["long_label"].lower()))
 
+        ratio = len(overlap_pairs) / len(self.odataprops) if self.odataprops else 0.0
         return {
             "count": len(overlap_pairs),
+            "ratio": ratio,
             "items": overlap_pairs,
         }
 
@@ -1187,8 +1230,10 @@ class OntologyPatternToolkit:
                         }
                     )
 
+        ratio = len(range_in_title) / len(self.oobjprops) if self.oobjprops else 0.0
         return {
             "count": len(range_in_title),
+            "ratio": ratio,
             "items": range_in_title,
         }
 
@@ -1216,8 +1261,10 @@ class OntologyPatternToolkit:
                         }
                     )
 
+        ratio = len(domain_in_title) / len(self.oobjprops) if self.oobjprops else 0.0
         return {
             "count": len(domain_in_title),
+            "ratio": ratio,
             "items": domain_in_title,
         }
 
@@ -1247,9 +1294,11 @@ class OntologyPatternToolkit:
                 sync_reasoner()
 
             inconsistent_classes = [str(c) for c in world.inconsistent_classes()]
+            ratio = len(inconsistent_classes) / len(self.oclasses) if self.oclasses else 0.0
             return {
                 "ontology_uri": ontology_uri,
                 "count": len(inconsistent_classes),
+                "ratio": ratio,
                 "items": inconsistent_classes,
             }
         except Exception as exc:
