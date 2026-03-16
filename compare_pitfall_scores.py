@@ -108,7 +108,7 @@ def _harmonic_mean_of_ratios(values: Iterable[float]) -> float:
 def _format_count(value: float) -> str:
     if value.is_integer():
         return str(int(value))
-    return f"{value:.2f}".rstrip("0").rstrip(".")
+    return f"{value:.3f}".rstrip("0").rstrip(".")
 
 
 def _write_markdown_table(
@@ -116,6 +116,7 @@ def _write_markdown_table(
     per_file_scores: Dict[str, Dict[str, Tuple[float, float]]],
     filenames: List[str],
     column_names: List[str],
+    ratio_only: bool = False,
 ) -> None:
     """Write comparison data to a markdown table file."""
     lines: List[str] = []
@@ -123,8 +124,11 @@ def _write_markdown_table(
     # Build header
     header = ["pitfall_id", "pitfall_title"]
     for col_name in column_names:
-        header.append(f"{col_name}_count")
-        header.append(f"{col_name}_ratio")
+        if ratio_only:
+            header.append(f"{col_name}_ratio")
+        else:
+            header.append(f"{col_name}_count")
+            header.append(f"{col_name}_ratio")
     lines.append("| " + " | ".join(header) + " |")
     
     # Separator row
@@ -136,8 +140,11 @@ def _write_markdown_table(
         row = [pitfall_id, pitfall_title]
         for filename in filenames:
             count, ratio = per_file_scores[filename][pitfall_id]
-            row.append(_format_count(count))
-            row.append(f"{ratio:.2f}")
+            if ratio_only:
+                row.append(f"{ratio:.3f}")
+            else:
+                row.append(_format_count(count))
+                row.append(f"{ratio:.3f}")
         lines.append("| " + " | ".join(row) + " |")
     
     # Harmonic mean row
@@ -145,8 +152,11 @@ def _write_markdown_table(
     for filename in filenames:
         count_values = [per_file_scores[filename][pitfall_id][0] for pitfall_id, _ in PITFALL_TAXONOMY]
         ratio_values = [per_file_scores[filename][pitfall_id][1] for pitfall_id, _ in PITFALL_TAXONOMY]
-        harmonic_row.append(f"{_harmonic_mean(count_values):.2f}")
-        harmonic_row.append(f"{_harmonic_mean_of_ratios(ratio_values):.2f}")
+        if ratio_only:
+            harmonic_row.append(f"{_harmonic_mean_of_ratios(ratio_values):.3f}")
+        else:
+            harmonic_row.append(f"{_harmonic_mean(count_values):.3f}")
+            harmonic_row.append(f"{_harmonic_mean_of_ratios(ratio_values):.3f}")
     lines.append("| " + " | ".join(harmonic_row) + " |")
     
     output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -186,6 +196,11 @@ def _build_parser() -> argparse.ArgumentParser:
         "--output-markdown",
         default="output/pitfall_score_comparison.md",
         help="Output markdown table path (default: output/pitfall_score_comparison.md).",
+    )
+    parser.add_argument(
+        "--ratio-only",
+        action="store_true",
+        help="Export only ratio columns (omit count columns) in CSV and markdown outputs.",
     )
     return parser
 
@@ -227,16 +242,22 @@ def main() -> int:
         # Build header: pitfall_id, pitfall_title, then for each file: count, ratio
         header = ["pitfall_id", "pitfall_title"]
         for col_name in column_names:
-            header.append(f"{col_name}_count")
-            header.append(f"{col_name}_ratio")
+            if args.ratio_only:
+                header.append(f"{col_name}_ratio")
+            else:
+                header.append(f"{col_name}_count")
+                header.append(f"{col_name}_ratio")
         writer.writerow(header)
 
         for pitfall_id, pitfall_title in PITFALL_TAXONOMY:
             row = [pitfall_id, pitfall_title]
             for filename in filenames:
                 count, ratio = per_file_scores[filename][pitfall_id]
-                row.append(_format_count(count))
-                row.append(f"{ratio:.2f}")
+                if args.ratio_only:
+                    row.append(f"{ratio:.3f}")
+                else:
+                    row.append(_format_count(count))
+                    row.append(f"{ratio:.3f}")
             writer.writerow(row)
 
         # Harmonic mean row for counts and ratios
@@ -244,8 +265,11 @@ def main() -> int:
         for filename in filenames:
             count_values = [per_file_scores[filename][pitfall_id][0] for pitfall_id, _ in PITFALL_TAXONOMY]
             ratio_values = [per_file_scores[filename][pitfall_id][1] for pitfall_id, _ in PITFALL_TAXONOMY]
-            harmonic_row.append(f"{_harmonic_mean(count_values):.2f}")
-            harmonic_row.append(f"{_harmonic_mean_of_ratios(ratio_values):.2f}")
+            if args.ratio_only:
+                harmonic_row.append(f"{_harmonic_mean_of_ratios(ratio_values):.3f}")
+            else:
+                harmonic_row.append(f"{_harmonic_mean(count_values):.3f}")
+                harmonic_row.append(f"{_harmonic_mean_of_ratios(ratio_values):.3f}")
         writer.writerow(harmonic_row)
 
     print(f"Comparison CSV written to {output_path}")
@@ -253,7 +277,13 @@ def main() -> int:
     # Write markdown table
     markdown_path = Path(args.output_markdown)
     markdown_path.parent.mkdir(parents=True, exist_ok=True)
-    _write_markdown_table(markdown_path, per_file_scores, filenames, column_names)
+    _write_markdown_table(
+        markdown_path,
+        per_file_scores,
+        filenames,
+        column_names,
+        ratio_only=args.ratio_only,
+    )
     print(f"Comparison markdown written to {markdown_path}")
     
     return 0
