@@ -1,0 +1,10 @@
+Broadcom is reportedly planning to make major layoffs at VMware as its $61bn acquisition of the cloud company nears the ribbon cutting ceremony.
+According to sources speaking to Business Insider , the Broadcom cuts are expected to focus on non-engineering roles.
+It is speculated that layoffs could come as early as the end of this month after both companies publish their latest earnings results.
+The reports come hot on the heels of a heavily redacted document filed with the Competition and Markets Authority that argued VMware will fail to execute its multi-cloud strategy alone.
+The UK regulator gave the deal its stamp of approval last month after the blockbuster merger was given the green lightin Europe.
+The 40-page document makes the case for a marriage between Broadcom and VMware, with the former arguing that the acquisition of VMware will form an organisation capable of creating competition for hyperscale clouds, which VMware can't do alone.
+"VMware has a strong core technology and operates in a proven and growing market for enterprise workloads. But VMware's own internal documents describe its market position as a [REDACTED]," the document reads.
+"Broadcom believes it can provide VMware with the scale and capabilities to reverse this trend. Broadcom plans to win more enterprise workloads by [REDACTED]. With time and investment, Broadcom's objective is to enable enterprises more easily to deploy workloads across cloud environments (both private and public) and to move workloads among those environments.
+"In short, Broadcom intends to execute Phases 2 and 3 of VMware's growth plan that VMware has failed to do and is unable to achieve alone."
+Broadcom has been contacted for comment.

@@ -1,0 +1,20 @@
+Tesla is now facing another class action lawsuit, and this time, it is related to its overstating of the range of its electric vehicles, which was exposed last week.
+Last week, we shared a new report from Reuters that highlighted some questionable practices by Tesla related to overstating its advertised range .
+The report showed how Tesla "gamed" the system to boost its EPA range, while Tesla owners have difficulty achieving that advertised range in their vehicles.
+It also went as far as claiming that Tesla had developed a special algorithm that showed drivers a more optimistic range at first and then turned more precise once the vehicle's state of charge dipped below 50%.
+Now three Tesla owners in California have already leveraged the report into a class action lawsuit filed in the US District Court for the Northern District of California.
+Put simply, Tesla has a duty to deliver a product that performs as advertised.
+With already three Tesla owners on board, the complaint is asking for class action status and aims to represent every Tesla owner in California. It seeks unspecified damages.
+As we reported last week, a lot of what was in the Reuters report were things that Tesla is allowed to do based on how the EPA calculates range.
+The EPA range is what automakers are allowed to advertise.
+While Tesla is known to take advantage of the EPA's system to advertise the most optimistic version of the range of its vehicles, it appears to be within the bounds of the regulator.
+However, many other automakers take a more conscious approach when it comes to advertised range, and maybe it would be good for Tesla to do the same.
+40k mile 2021 Model Y owner here.
+Real life range? We are conservative drivers who live in a mild climate. We consistently average 15% less range than advertised. Inclines and driving over 60 mph are electron vampires.
+The most damning part of the report was probably the supposed Tesla software that would make the range look better when full and get more precise only when it becomes more crucial at lower battery capacity.
+That's something that has been known to Tesla owners, but it was always sold as the range prediction getting more accurate after taking more factors into accounts for that specific drive, like speed and weather conditions.
+Reuters alleged that Tesla instead specifically designed it like that to make its range look better. If that's true, that is a bad look, but the article also weirdly stated that it could confirm if Tesla was still doing that and could only confirm Tesla was doing it when it was selling "the Roadster and Model S."
+Tesla basically was never selling both the Roadster and Model S at the same time, so we have to assume that it was for when Tesla only had Model S in its lineup between 2012-2015.
+Add Electrek to your Google News feed.
+FTC: We use income earning auto affiliate links. More.
+Stay up to date with the latest content by subscribing to Electrek on Google News .  You're reading Electrek— experts who break news about Tesla , electric vehicles, and green energy , day after day. Be sure to check out our homepage for all the latest news, and follow Electrek on Twitter , Facebook , and LinkedIn to stay in the loop. Don't know where to start? Check out our YouTube channel for the latest reviews.
