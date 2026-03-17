@@ -215,7 +215,7 @@ CLI responses are JSON with this structure:
 
 - Some patterns rely on `SentenceTransformer` models and may download model weights on first run.
 - NLTK resources are fetched on demand when needed by a pattern.
-- `P19` uses `owlready2` reasoner integration and can take longer than purely syntactic checks.
+- `P4.7` uses `owlready2` reasoner integration and can take longer than purely syntactic checks.
 
 ## Tested ontologies
 
