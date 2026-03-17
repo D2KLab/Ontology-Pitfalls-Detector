@@ -1,6 +1,5 @@
-data
-output
 *.code-workspace
+ontologies
 
 .DS_Store
 # Byte-compiled / optimized / DLL files

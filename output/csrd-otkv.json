@@ -1,0 +1,4194 @@
+{
+  "metadata": {
+    "ontology_path": "/Users/pasquale/git/Ontology-Pitfalls-Detector/data/ontology_CSRD_V2.ttl",
+    "classes": 361,
+    "object_properties": 162,
+    "datatype_properties": 142
+  },
+  "selected_pitfalls": [
+    "P1.1",
+    "P1.2",
+    "P1.3",
+    "P2.1",
+    "P2.2",
+    "P2.3",
+    "P2.4",
+    "P2.5",
+    "P2.6",
+    "P3.1",
+    "P3.2",
+    "P3.3",
+    "P4.1",
+    "P4.2",
+    "P4.3",
+    "P4.4",
+    "P4.5",
+    "P4.6",
+    "P4.7"
+  ],
+  "results": {
+    "P1.1": {
+      "count": 1,
+      "ratio": 0.002770083102493075,
+      "items": [
+        {
+          "parent_uri": "http://example.org/ontology#Plan",
+          "parent_label": "Plan",
+          "child_uri": "http://example.org/ontology#Program",
+          "child_label": "Program",
+          "description": "Program is child of Plan even though they are disjoint."
+        }
+      ]
+    },
+    "P1.2": {
+      "count": 1,
+      "ratio": 0.002770083102493075,
+      "items": [
+        {
+          "child_uri": "http://example.org/ontology#Auditor",
+          "parent_uri": "http://example.org/ontology#ProfessionalServicesFirm",
+          "grandparent_uri": "http://example.org/ontology#Company",
+          "child_label": "Auditor",
+          "parent_label": "Professional Services Firm",
+          "grandparent_label": "Company",
+          "description": "Auditor is subclass of both Professional Services Firm and Company."
+        }
+      ]
+    },
+    "P1.3": {
+      "ontology_uri": "http://example.org/ontology#",
+      "count": 0,
+      "ratio": 0.0,
+      "items": []
+    },
+    "P2.1": {
+      "count": 28,
+      "ratio": 0.07756232686980609,
+      "items": [
+        {
+          "class_uri": "http://example.org/ontology#BuildingMaterial",
+          "class_label": "BuildingMaterial",
+          "missing_parent_uri": "http://example.org/ontology#Material",
+          "missing_parent_label": "Material",
+          "shared_token": "Material",
+          "description": "BuildingMaterial is not child of Material."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ConstructionMaterial",
+          "class_label": "ConstructionMaterial",
+          "missing_parent_uri": "http://example.org/ontology#Material",
+          "missing_parent_label": "Material",
+          "shared_token": "Material",
+          "description": "ConstructionMaterial is not child of Material."
+        },
+        {
+          "class_uri": "http://example.org/ontology#RawMaterial",
+          "class_label": "RawMaterial",
+          "missing_parent_uri": "http://example.org/ontology#Material",
+          "missing_parent_label": "Material",
+          "shared_token": "Material",
+          "description": "RawMaterial is not child of Material."
+        },
+        {
+          "class_uri": "http://example.org/ontology#StrategicRawMaterial",
+          "class_label": "StrategicRawMaterial",
+          "missing_parent_uri": "http://example.org/ontology#Material",
+          "missing_parent_label": "Material",
+          "shared_token": "Material",
+          "description": "StrategicRawMaterial is not child of Material."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ClimateTransitionPlan",
+          "class_label": "ClimateTransitionPlan",
+          "missing_parent_uri": "http://example.org/ontology#Plan",
+          "missing_parent_label": "Plan",
+          "shared_token": "Plan",
+          "description": "ClimateTransitionPlan is not child of Plan."
+        },
+        {
+          "class_uri": "http://example.org/ontology#IncentivePlan",
+          "class_label": "IncentivePlan",
+          "missing_parent_uri": "http://example.org/ontology#Plan",
+          "missing_parent_label": "Plan",
+          "shared_token": "Plan",
+          "description": "IncentivePlan is not child of Plan."
+        },
+        {
+          "class_uri": "http://example.org/ontology#VigilancePlan",
+          "class_label": "VigilancePlan",
+          "missing_parent_uri": "http://example.org/ontology#Plan",
+          "missing_parent_label": "Plan",
+          "shared_token": "Plan",
+          "description": "VigilancePlan is not child of Plan."
+        },
+        {
+          "class_uri": "http://example.org/ontology#CoolingSystem",
+          "class_label": "CoolingSystem",
+          "missing_parent_uri": "http://example.org/ontology#System",
+          "missing_parent_label": "System",
+          "shared_token": "System",
+          "description": "CoolingSystem is not child of System."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ManagementSystem",
+          "class_label": "ManagementSystem",
+          "missing_parent_uri": "http://example.org/ontology#System",
+          "missing_parent_label": "System",
+          "shared_token": "System",
+          "description": "ManagementSystem is not child of System."
+        },
+        {
+          "class_uri": "http://example.org/ontology#MediaContent",
+          "class_label": "MediaContent",
+          "missing_parent_uri": "http://example.org/ontology#Content",
+          "missing_parent_label": "Content",
+          "shared_token": "Content",
+          "description": "MediaContent is not child of Content."
+        },
+        {
+          "class_uri": "http://example.org/ontology#MediaProgram",
+          "class_label": "MediaProgram",
+          "missing_parent_uri": "http://example.org/ontology#Program",
+          "missing_parent_label": "Program",
+          "shared_token": "Program",
+          "description": "MediaProgram is not child of Program."
+        },
+        {
+          "class_uri": "http://example.org/ontology#TrainingProgram",
+          "class_label": "TrainingProgram",
+          "missing_parent_uri": "http://example.org/ontology#Program",
+          "missing_parent_label": "Program",
+          "shared_token": "Program",
+          "description": "TrainingProgram is not child of Program."
+        },
+        {
+          "class_uri": "http://example.org/ontology#TelecomNetwork",
+          "class_label": "TelecomNetwork",
+          "missing_parent_uri": "http://example.org/ontology#Network",
+          "missing_parent_label": "Network",
+          "shared_token": "Network",
+          "description": "TelecomNetwork is not child of Network."
+        },
+        {
+          "class_uri": "http://example.org/ontology#MultiStakeholderInitiative",
+          "class_label": "MultiStakeholderInitiative",
+          "missing_parent_uri": "http://example.org/ontology#Initiative",
+          "missing_parent_label": "Initiative",
+          "shared_token": "Initiative",
+          "description": "MultiStakeholderInitiative is not child of Initiative."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ClimateOpportunity",
+          "class_label": "ClimateOpportunity",
+          "missing_parent_uri": "http://example.org/ontology#Opportunity",
+          "missing_parent_label": "Opportunity",
+          "shared_token": "Opportunity",
+          "description": "ClimateOpportunity is not child of Opportunity."
+        },
+        {
+          "class_uri": "http://example.org/ontology#WoodConstruction",
+          "class_label": "WoodConstruction",
+          "missing_parent_uri": "http://example.org/ontology#Construction",
+          "missing_parent_label": "Construction",
+          "shared_token": "Construction",
+          "description": "WoodConstruction is not child of Construction."
+        },
+        {
+          "class_uri": "http://example.org/ontology#DeforestationFreePrimarySupplyChain",
+          "class_label": "DeforestationFreePrimarySupplyChain",
+          "missing_parent_uri": "http://example.org/ontology#SupplyChain",
+          "missing_parent_label": "SupplyChain",
+          "shared_token": "Supply",
+          "description": "DeforestationFreePrimarySupplyChain is not child of SupplyChain."
+        },
+        {
+          "class_uri": "http://example.org/ontology#AdministrativeSite",
+          "class_label": "AdministrativeSite",
+          "missing_parent_uri": "http://example.org/ontology#Site",
+          "missing_parent_label": "Site",
+          "shared_token": "Site",
+          "description": "AdministrativeSite is not child of Site."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ProductionSite",
+          "class_label": "ProductionSite",
+          "missing_parent_uri": "http://example.org/ontology#Site",
+          "missing_parent_label": "Site",
+          "shared_token": "Site",
+          "description": "ProductionSite is not child of Site."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ExpertGroup",
+          "class_label": "ExpertGroup",
+          "missing_parent_uri": "http://example.org/ontology#Group",
+          "missing_parent_label": "Group",
+          "shared_token": "Group",
+          "description": "ExpertGroup is not child of Group."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ShareholderGroup",
+          "class_label": "ShareholderGroup",
+          "missing_parent_uri": "http://example.org/ontology#Group",
+          "missing_parent_label": "Group",
+          "shared_token": "Group",
+          "description": "ShareholderGroup is not child of Group."
+        },
+        {
+          "class_uri": "http://example.org/ontology#CommercialInvestment",
+          "class_label": "CommercialInvestment",
+          "missing_parent_uri": "http://example.org/ontology#Investment",
+          "missing_parent_label": "Investment",
+          "shared_token": "Investment",
+          "description": "CommercialInvestment is not child of Investment."
+        },
+        {
+          "class_uri": "http://example.org/ontology#CustomsLegislation",
+          "class_label": "CustomsLegislation",
+          "missing_parent_uri": "http://example.org/ontology#Legislation",
+          "missing_parent_label": "Legislation",
+          "shared_token": "Legislation",
+          "description": "CustomsLegislation is not child of Legislation."
+        },
+        {
+          "class_uri": "http://example.org/ontology#DeforestationFreePrimarySupplyChain",
+          "class_label": "DeforestationFreePrimarySupplyChain",
+          "missing_parent_uri": "http://example.org/ontology#PrimarySupplyChain",
+          "missing_parent_label": "PrimarySupplyChain",
+          "shared_token": "Primary",
+          "description": "DeforestationFreePrimarySupplyChain is not child of PrimarySupplyChain."
+        },
+        {
+          "class_uri": "http://example.org/ontology#EuropeanWorksCouncil",
+          "class_label": "EuropeanWorksCouncil",
+          "missing_parent_uri": "http://example.org/ontology#WorksCouncil",
+          "missing_parent_label": "WorksCouncil",
+          "shared_token": "Council",
+          "description": "EuropeanWorksCouncil is not child of WorksCouncil."
+        },
+        {
+          "class_uri": "http://example.org/ontology#PowerGenerationFacility",
+          "class_label": "PowerGenerationFacility",
+          "missing_parent_uri": "http://example.org/ontology#Facility",
+          "missing_parent_label": "Facility",
+          "shared_token": "Facility",
+          "description": "PowerGenerationFacility is not child of Facility."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ManagementPosition",
+          "class_label": "ManagementPosition",
+          "missing_parent_uri": "http://example.org/ontology#Position",
+          "missing_parent_label": "Position",
+          "shared_token": "Position",
+          "description": "ManagementPosition is not child of Position."
+        },
+        {
+          "class_uri": "http://example.org/ontology#StrategicRawMaterial",
+          "class_label": "StrategicRawMaterial",
+          "missing_parent_uri": "http://example.org/ontology#RawMaterial",
+          "missing_parent_label": "RawMaterial",
+          "shared_token": "Raw",
+          "description": "StrategicRawMaterial is not child of RawMaterial."
+        }
+      ]
+    },
+    "P2.2": {
+      "count": 31,
+      "ratio": 0.08587257617728532,
+      "items": [
+        {
+          "class_uri": "http://example.org/ontology#AccountingStandard",
+          "class_label": "Accounting Standard",
+          "description": "Accounting Standard has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#AudiovisualContent",
+          "class_label": "Audiovisual Content",
+          "description": "Audiovisual Content has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#BiosourcedMaterial",
+          "class_label": "Biosourced Material",
+          "description": "Biosourced Material has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ChemicalSubstance",
+          "class_label": "Chemical Substance",
+          "description": "Chemical Substance has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ConsumptionMetric",
+          "class_label": "Consumption Metric",
+          "description": "Consumption Metric has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Data",
+          "class_label": "Data",
+          "description": "Data has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#DocumentPart",
+          "class_label": "Document Part",
+          "description": "Document Part has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#EducationalInstitution",
+          "class_label": "Educational Institution",
+          "description": "Educational Institution has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#EmployeeRepresentativeBody",
+          "class_label": "Employee Representative Body",
+          "description": "Employee Representative Body has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#EnvironmentalRisk",
+          "class_label": "Environmental Risk",
+          "description": "Environmental Risk has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Equipment",
+          "class_label": "Equipment",
+          "description": "Equipment has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#FinancialMetric",
+          "class_label": "Financial Metric",
+          "description": "Financial Metric has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#FixedNetwork",
+          "class_label": "Fixed Network",
+          "description": "Fixed Network has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Framework",
+          "class_label": "Framework",
+          "description": "Framework has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Genre",
+          "class_label": "Genre",
+          "description": "Genre has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Goal",
+          "class_label": "Goal",
+          "description": "Goal has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Housing",
+          "class_label": "Housing",
+          "description": "Housing has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#LegalDocument",
+          "class_label": "Legal Document",
+          "description": "Legal Document has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Person",
+          "class_label": "Person",
+          "description": "Person has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#PhysicalAsset",
+          "class_label": "Physical Asset",
+          "description": "Physical Asset has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Platform",
+          "class_label": "Platform",
+          "description": "Platform has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Policy",
+          "class_label": "Policy",
+          "description": "Policy has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#PowerGenerationFacility",
+          "class_label": "Power Generation Facility",
+          "description": "Power Generation Facility has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ProfessionalServicesFirm",
+          "class_label": "Professional Services Firm",
+          "description": "Professional Services Firm has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#PropertyRight",
+          "class_label": "Property Right",
+          "description": "Property Right has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#RecycledMaterial",
+          "class_label": "Recycled Material",
+          "description": "Recycled Material has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Road",
+          "class_label": "Road",
+          "description": "Road has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Site",
+          "class_label": "Site",
+          "description": "Site has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#SocialIssue",
+          "class_label": "Social Issue",
+          "description": "Social Issue has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Species",
+          "class_label": "Species",
+          "description": "Species has only one direct subclass."
+        },
+        {
+          "class_uri": "http://example.org/ontology#SupplyChain",
+          "class_label": "Supply Chain",
+          "description": "Supply Chain has only one direct subclass."
+        }
+      ]
+    },
+    "P2.3": {
+      "min_similarity": 0.6,
+      "count": 7,
+      "ratio": 0.019390581717451522,
+      "items": [
+        {
+          "class_1_uri": "http://example.org/ontology#AuditCommittee",
+          "class_1_label": "Audit Committee",
+          "class_2_uri": "http://example.org/ontology#ExecutiveCommittee",
+          "class_2_label": "Executive Committee",
+          "label_similarity": 0.7086134552955627,
+          "description": "Audit Committee and Executive Committee are disjoint but semantically similar (similarity 0.71)."
+        },
+        {
+          "class_1_uri": "http://example.org/ontology#Building",
+          "class_1_label": "Building",
+          "class_2_uri": "http://example.org/ontology#ConstructionMaterial",
+          "class_2_label": "Construction Material",
+          "label_similarity": 0.6916454434394836,
+          "description": "Building and Construction Material are disjoint but semantically similar (similarity 0.69)."
+        },
+        {
+          "class_1_uri": "http://example.org/ontology#BusinessApproach",
+          "class_1_label": "Business Approach",
+          "class_2_uri": "http://example.org/ontology#BusinessModel",
+          "class_2_label": "Business Model",
+          "label_similarity": 0.691601037979126,
+          "description": "Business Approach and Business Model are disjoint but semantically similar (similarity 0.69)."
+        },
+        {
+          "class_1_uri": "http://example.org/ontology#Company",
+          "class_1_label": "Company",
+          "class_2_uri": "http://example.org/ontology#ShareholderGroup",
+          "class_2_label": "Shareholder Group",
+          "label_similarity": 0.6344015598297119,
+          "description": "Company and Shareholder Group are disjoint but semantically similar (similarity 0.63)."
+        },
+        {
+          "class_1_uri": "http://example.org/ontology#FinancialMetric",
+          "class_1_label": "Financial Metric",
+          "class_2_uri": "http://example.org/ontology#OperationalMetric",
+          "class_2_label": "Operational Metric",
+          "label_similarity": 0.6299206018447876,
+          "description": "Financial Metric and Operational Metric are disjoint but semantically similar (similarity 0.63)."
+        },
+        {
+          "class_1_uri": "http://example.org/ontology#FinancialMetric",
+          "class_1_label": "Financial Metric",
+          "class_2_uri": "http://example.org/ontology#OwnershipMetric",
+          "class_2_label": "Ownership Metric",
+          "label_similarity": 0.6152872443199158,
+          "description": "Financial Metric and Ownership Metric are disjoint but semantically similar (similarity 0.62)."
+        },
+        {
+          "class_1_uri": "http://example.org/ontology#Program",
+          "class_1_label": "Program",
+          "class_2_uri": "http://example.org/ontology#TrainingProgram",
+          "class_2_label": "Training Program",
+          "label_similarity": 0.614189088344574,
+          "description": "Program and Training Program are disjoint but semantically similar (similarity 0.61)."
+        }
+      ]
+    },
+    "P2.4": {
+      "count": 9,
+      "ratio": 0.029605263157894735,
+      "items": [
+        {
+          "property_uri": "http://example.org/ontology#conductsTraining",
+          "property_label": "conducts Training",
+          "description": "conducts Training has only one direct subproperty."
+        },
+        {
+          "property_uri": "http://example.org/ontology#isBasedOn",
+          "property_label": "is Based On",
+          "description": "is Based On has only one direct subproperty."
+        },
+        {
+          "property_uri": "http://example.org/ontology#isPartOf",
+          "property_label": "is Part Of",
+          "description": "is Part Of has only one direct subproperty."
+        },
+        {
+          "property_uri": "http://example.org/ontology#oversees",
+          "property_label": "oversees",
+          "description": "oversees has only one direct subproperty."
+        },
+        {
+          "property_uri": "http://example.org/ontology#references",
+          "property_label": "references",
+          "description": "references has only one direct subproperty."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasDate",
+          "property_label": "has Date",
+          "description": "has Date has only one direct subproperty."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasPublicationYear",
+          "property_label": "has Publication Year",
+          "description": "has Publication Year has only one direct subproperty."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasStartYear",
+          "property_label": "has Start Year",
+          "description": "has Start Year has only one direct subproperty."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasValue",
+          "property_label": "has Value",
+          "description": "has Value has only one direct subproperty."
+        }
+      ]
+    },
+    "P2.5": {
+      "multi_domain_count": 13,
+      "multi_domain_ratio": 0.08024691358024691,
+      "multi_domain_items": [
+        {
+          "property_uri": "http://example.org/ontology#hasFoundingEvent",
+          "property_label": "has Founding Event",
+          "domains": [
+            "Company",
+            "Group"
+          ],
+          "common_superclasses": [
+            "Agent",
+            "Organization"
+          ],
+          "description": "has Founding Event has multiple domains (Company, Group) with shared superclasses (Agent, Organization)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasGovernanceBody",
+          "property_label": "has Governance Body",
+          "domains": [
+            "Company",
+            "Group",
+            "Organization"
+          ],
+          "common_superclasses": [
+            "Agent",
+            "Organization"
+          ],
+          "description": "has Governance Body has multiple domains (Company, Group, Organization) with shared superclasses (Agent, Organization)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasInitiative",
+          "property_label": "has Initiative",
+          "domains": [
+            "Company",
+            "Organization"
+          ],
+          "common_superclasses": [
+            "Agent",
+            "Organization"
+          ],
+          "description": "has Initiative has multiple domains (Company, Organization) with shared superclasses (Agent, Organization)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasMember",
+          "property_label": "has Member",
+          "domains": [
+            "Governance Body",
+            "Governance Entity"
+          ],
+          "common_superclasses": [
+            "Abstract Concept",
+            "Governance Entity"
+          ],
+          "description": "has Member has multiple domains (Governance Body, Governance Entity) with shared superclasses (Abstract Concept, Governance Entity)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasPolicy",
+          "property_label": "has Policy",
+          "domains": [
+            "Company",
+            "Organization"
+          ],
+          "common_superclasses": [
+            "Agent",
+            "Organization"
+          ],
+          "description": "has Policy has multiple domains (Company, Organization) with shared superclasses (Agent, Organization)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasRisk",
+          "property_label": "has Risk",
+          "domains": [
+            "Company",
+            "Group"
+          ],
+          "common_superclasses": [
+            "Agent",
+            "Organization"
+          ],
+          "description": "has Risk has multiple domains (Company, Group) with shared superclasses (Agent, Organization)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasShareholding",
+          "property_label": "has Shareholding",
+          "domains": [
+            "Company",
+            "Shareholder Group"
+          ],
+          "common_superclasses": [
+            "Agent",
+            "Organization"
+          ],
+          "description": "has Shareholding has multiple domains (Company, Shareholder Group) with shared superclasses (Agent, Organization)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasStrategy",
+          "property_label": "has Strategy",
+          "domains": [
+            "Company",
+            "Organization"
+          ],
+          "common_superclasses": [
+            "Agent",
+            "Organization"
+          ],
+          "description": "has Strategy has multiple domains (Company, Organization) with shared superclasses (Agent, Organization)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#implements",
+          "property_label": "implements",
+          "domains": [
+            "Company",
+            "Governance Body"
+          ],
+          "common_superclasses": [
+            "Agent",
+            "Organization"
+          ],
+          "description": "implements has multiple domains (Company, Governance Body) with shared superclasses (Agent, Organization)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#includes",
+          "property_label": "includes",
+          "domains": [
+            "Financial Statement",
+            "Incentive Plan",
+            "Policy",
+            "Regulatory Filing",
+            "Report Section"
+          ],
+          "common_superclasses": [
+            "Abstract Concept"
+          ],
+          "description": "includes has multiple domains (Financial Statement, Incentive Plan, Policy, Regulatory Filing, +1 more) with shared superclasses (Abstract Concept)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#isAuditedBy",
+          "property_label": "is Audited By",
+          "domains": [
+            "Company",
+            "Group"
+          ],
+          "common_superclasses": [
+            "Agent",
+            "Organization"
+          ],
+          "description": "is Audited By has multiple domains (Company, Group) with shared superclasses (Agent, Organization)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#isValidatedBy",
+          "property_label": "is Validated By",
+          "domains": [
+            "Commitment",
+            "Report",
+            "Target"
+          ],
+          "common_superclasses": [
+            "Abstract Concept"
+          ],
+          "description": "is Validated By has multiple domains (Commitment, Report, Target) with shared superclasses (Abstract Concept)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#usesMethodology",
+          "property_label": "uses Methodology",
+          "domains": [
+            "Company",
+            "Organization"
+          ],
+          "common_superclasses": [
+            "Agent",
+            "Organization"
+          ],
+          "description": "uses Methodology has multiple domains (Company, Organization) with shared superclasses (Agent, Organization)."
+        }
+      ],
+      "multi_range_count": 5,
+      "multi_range_ratio": 0.030864197530864196,
+      "multi_range_items": [
+        {
+          "property_uri": "http://example.org/ontology#advises",
+          "property_label": "advises",
+          "ranges": [
+            "Company",
+            "Governance Body"
+          ],
+          "common_superclasses": [
+            "Agent",
+            "Organization"
+          ],
+          "description": "advises has multiple ranges (Company, Governance Body) with shared superclasses (Agent, Organization)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#approves",
+          "property_label": "approves",
+          "ranges": [
+            "Governance Body",
+            "Report"
+          ],
+          "common_superclasses": [
+            "Abstract Concept"
+          ],
+          "description": "approves has multiple ranges (Governance Body, Report) with shared superclasses (Abstract Concept)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasCommittee",
+          "property_label": "has Committee",
+          "ranges": [
+            "Board Committee",
+            "Governance Committee"
+          ],
+          "common_superclasses": [
+            "Abstract Concept",
+            "Governance Entity"
+          ],
+          "description": "has Committee has multiple ranges (Board Committee, Governance Committee) with shared superclasses (Abstract Concept, Governance Entity)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasMetric",
+          "property_label": "has Metric",
+          "ranges": [
+            "Key Performance Indicator",
+            "Metric",
+            "Metric Report"
+          ],
+          "common_superclasses": [
+            "Abstract Concept"
+          ],
+          "description": "has Metric has multiple ranges (Key Performance Indicator, Metric, Metric Report) with shared superclasses (Abstract Concept)."
+        },
+        {
+          "property_uri": "http://example.org/ontology#implements",
+          "property_label": "implements",
+          "ranges": [
+            "Action Plan",
+            "Strategic Plan"
+          ],
+          "common_superclasses": [
+            "Abstract Concept",
+            "Plan"
+          ],
+          "description": "implements has multiple ranges (Action Plan, Strategic Plan) with shared superclasses (Abstract Concept, Plan)."
+        }
+      ]
+    },
+    "P2.6": {
+      "threshold": 0.8,
+      "already_sibling_count": 1,
+      "already_siblings_ratio": 0.003289473684210526,
+      "already_siblings": [
+        {
+          "p1_uri": "http://example.org/ontology#hasCeo",
+          "p2_uri": "http://example.org/ontology#hasDeputyCeo",
+          "p1_label": "has Ceo",
+          "p2_label": "has Deputy Ceo",
+          "combined_similarity": 0.8205788135528564,
+          "domain_matched": true,
+          "common_parent_labels": [
+            "employs"
+          ],
+          "description": "has Ceo and has Deputy Ceo are similar properties and already share parent(s): employs (similarity 0.82)."
+        }
+      ],
+      "count": 16,
+      "ratio": 0.05263157894736842,
+      "items": [
+        {
+          "p1_uri": "http://example.org/ontology#hasAffordableMicronutrientFortifiedServings",
+          "p2_uri": "http://example.org/ontology#hasMicronutrientFortifiedServings",
+          "p1_label": "has Affordable Micronutrient Fortified Servings",
+          "p2_label": "has Micronutrient Fortified Servings",
+          "combined_similarity": 0.9232467412948608,
+          "domain_matched": true,
+          "description": "has Affordable Micronutrient Fortified Servings and has Micronutrient Fortified Servings are similar properties and may need a shared parent (similarity 0.92, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasRenewableEnergyShare",
+          "p2_uri": "http://example.org/ontology#hasRenewableEnergyShareValue",
+          "p1_label": "has Renewable Energy Share",
+          "p2_label": "has Renewable Energy Share Value",
+          "combined_similarity": 0.9091697931289673,
+          "domain_matched": false,
+          "description": "has Renewable Energy Share and has Renewable Energy Share Value are similar properties and may need a shared parent (similarity 0.91, domain/range match: no)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasGhgNetReduction",
+          "p2_uri": "http://example.org/ontology#hasGhgReduction",
+          "p1_label": "has Ghg Net Reduction",
+          "p2_label": "has Ghg Reduction",
+          "combined_similarity": 0.9078280925750732,
+          "domain_matched": true,
+          "description": "has Ghg Net Reduction and has Ghg Reduction are similar properties and may need a shared parent (similarity 0.91, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasNetGhgEmissions",
+          "p2_uri": "http://example.org/ontology#hasTotalGhgEmissions",
+          "p1_label": "has Net Ghg Emissions",
+          "p2_label": "has Total Ghg Emissions",
+          "combined_similarity": 0.8834108114242554,
+          "domain_matched": true,
+          "description": "has Net Ghg Emissions and has Total Ghg Emissions are similar properties and may need a shared parent (similarity 0.88, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasChemicalOxygenDemandConcentration",
+          "p2_uri": "http://example.org/ontology#hasChemicalOxygenDemandOutput",
+          "p1_label": "has Chemical Oxygen Demand Concentration",
+          "p2_label": "has Chemical Oxygen Demand Output",
+          "combined_similarity": 0.8700408339500427,
+          "domain_matched": true,
+          "description": "has Chemical Oxygen Demand Concentration and has Chemical Oxygen Demand Output are similar properties and may need a shared parent (similarity 0.87, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasSubsidiary",
+          "p2_uri": "http://example.org/ontology#isSubsidiaryOf",
+          "p1_label": "has Subsidiary",
+          "p2_label": "is Subsidiary Of",
+          "combined_similarity": 0.8685613870620728,
+          "domain_matched": true,
+          "description": "has Subsidiary and is Subsidiary Of are similar properties and may need a shared parent (similarity 0.87, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasGhgReduction",
+          "p2_uri": "http://example.org/ontology#hasGhgReductionTarget",
+          "p1_label": "has Ghg Reduction",
+          "p2_label": "has Ghg Reduction Target",
+          "combined_similarity": 0.8533006310462952,
+          "domain_matched": true,
+          "description": "has Ghg Reduction and has Ghg Reduction Target are similar properties and may need a shared parent (similarity 0.85, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasFossilFuelPercentage",
+          "p2_uri": "http://example.org/ontology#hasFossilFuelShare",
+          "p1_label": "has Fossil Fuel Percentage",
+          "p2_label": "has Fossil Fuel Share",
+          "combined_similarity": 0.8436868786811829,
+          "domain_matched": false,
+          "description": "has Fossil Fuel Percentage and has Fossil Fuel Share are similar properties and may need a shared parent (similarity 0.84, domain/range match: no)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasInvestee",
+          "p2_uri": "http://example.org/ontology#hasInvestor",
+          "p1_label": "has Investee",
+          "p2_label": "has Investor",
+          "combined_similarity": 0.8386836051940918,
+          "domain_matched": true,
+          "description": "has Investee and has Investor are similar properties and may need a shared parent (similarity 0.84, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasAdditionalMemberCount",
+          "p2_uri": "http://example.org/ontology#hasMemberCount",
+          "p1_label": "has Additional Member Count",
+          "p2_label": "has Member Count",
+          "combined_similarity": 0.8237192630767822,
+          "domain_matched": true,
+          "description": "has Additional Member Count and has Member Count are similar properties and may need a shared parent (similarity 0.82, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasNumberOfEmployees",
+          "p2_uri": "http://example.org/ontology#hasTotalEmployees",
+          "p1_label": "has Number Of Employees",
+          "p2_label": "has Total Employees",
+          "combined_similarity": 0.8221743702888489,
+          "domain_matched": true,
+          "description": "has Number Of Employees and has Total Employees are similar properties and may need a shared parent (similarity 0.82, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasWaterConsumedInHighStressRegions",
+          "p2_uri": "http://example.org/ontology#hasWaterWithdrawnInHighStressRegions",
+          "p1_label": "has Water Consumed In High Stress Regions",
+          "p2_label": "has Water Withdrawn In High Stress Regions",
+          "combined_similarity": 0.8140026926994324,
+          "domain_matched": true,
+          "description": "has Water Consumed In High Stress Regions and has Water Withdrawn In High Stress Regions are similar properties and may need a shared parent (similarity 0.81, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasFirstPublicationYear",
+          "p2_uri": "http://example.org/ontology#hasPublicationYear",
+          "p1_label": "has First Publication Year",
+          "p2_label": "has Publication Year",
+          "combined_similarity": 0.8128368854522705,
+          "domain_matched": true,
+          "description": "has First Publication Year and has Publication Year are similar properties and may need a shared parent (similarity 0.81, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasRenewableElectricityAchievement",
+          "p2_uri": "http://example.org/ontology#hasRenewableElectricityTarget",
+          "p1_label": "has Renewable Electricity Achievement",
+          "p2_label": "has Renewable Electricity Target",
+          "combined_similarity": 0.8086174130439758,
+          "domain_matched": true,
+          "description": "has Renewable Electricity Achievement and has Renewable Electricity Target are similar properties and may need a shared parent (similarity 0.81, domain/range match: yes)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasUpdateDate",
+          "p2_uri": "http://example.org/ontology#hasUpdateYear",
+          "p1_label": "has Update Date",
+          "p2_label": "has Update Year",
+          "combined_similarity": 0.804044783115387,
+          "domain_matched": false,
+          "description": "has Update Date and has Update Year are similar properties and may need a shared parent (similarity 0.80, domain/range match: no)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#isSubjectOf",
+          "p2_uri": "http://example.org/ontology#wasSubjectOf",
+          "p1_label": "is Subject Of",
+          "p2_label": "was Subject Of",
+          "combined_similarity": 0.8021535277366638,
+          "domain_matched": false,
+          "description": "is Subject Of and was Subject Of are similar properties and may need a shared parent (similarity 0.80, domain/range match: no)."
+        }
+      ]
+    },
+    "P3.1": {
+      "checked_count": 304,
+      "count": 0,
+      "ratio": 0.0,
+      "items": []
+    },
+    "P3.2": {
+      "count": 39,
+      "ratio": 0.24074074074074073,
+      "items": [
+        {
+          "property_uri": "http://example.org/ontology#adoptsStandard",
+          "property_label": "adoptsStandard",
+          "range_uri": "http://example.org/ontology#Standard",
+          "range_label": "Standard",
+          "description": "adoptsStandard repeats its range Standard in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#conductsAnalysis",
+          "property_label": "conductsAnalysis",
+          "range_uri": "http://example.org/ontology#Analysis",
+          "range_label": "Analysis",
+          "description": "conductsAnalysis repeats its range Analysis in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasActionPlan",
+          "property_label": "hasActionPlan",
+          "range_uri": "http://example.org/ontology#ActionPlan",
+          "range_label": "ActionPlan",
+          "description": "hasActionPlan repeats its range ActionPlan in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasAppointment",
+          "property_label": "hasAppointment",
+          "range_uri": "http://example.org/ontology#Appointment",
+          "range_label": "Appointment",
+          "description": "hasAppointment repeats its range Appointment in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasAuditor",
+          "property_label": "hasAuditor",
+          "range_uri": "http://example.org/ontology#Auditor",
+          "range_label": "Auditor",
+          "description": "hasAuditor repeats its range Auditor in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasBusinessSegment",
+          "property_label": "hasBusinessSegment",
+          "range_uri": "http://example.org/ontology#BusinessSegment",
+          "range_label": "BusinessSegment",
+          "description": "hasBusinessSegment repeats its range BusinessSegment in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasCapitalStructure",
+          "property_label": "hasCapitalStructure",
+          "range_uri": "http://example.org/ontology#CapitalStructure",
+          "range_label": "CapitalStructure",
+          "description": "hasCapitalStructure repeats its range CapitalStructure in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasCommitment",
+          "property_label": "hasCommitment",
+          "range_uri": "http://example.org/ontology#Commitment",
+          "range_label": "Commitment",
+          "description": "hasCommitment repeats its range Commitment in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasDividend",
+          "property_label": "hasDividend",
+          "range_uri": "http://example.org/ontology#Dividend",
+          "range_label": "Dividend",
+          "description": "hasDividend repeats its range Dividend in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasFinancialReporting",
+          "property_label": "hasFinancialReporting",
+          "range_uri": "http://example.org/ontology#FinancialReporting",
+          "range_label": "FinancialReporting",
+          "description": "hasFinancialReporting repeats its range FinancialReporting in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasFinancialStatement",
+          "property_label": "hasFinancialStatement",
+          "range_uri": "http://example.org/ontology#FinancialStatement",
+          "range_label": "FinancialStatement",
+          "description": "hasFinancialStatement repeats its range FinancialStatement in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasFoundation",
+          "property_label": "hasFoundation",
+          "range_uri": "http://example.org/ontology#Foundation",
+          "range_label": "Foundation",
+          "description": "hasFoundation repeats its range Foundation in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasFramework",
+          "property_label": "hasFramework",
+          "range_uri": "http://example.org/ontology#Framework",
+          "range_label": "Framework",
+          "description": "hasFramework repeats its range Framework in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasGovernanceBody",
+          "property_label": "hasGovernanceBody",
+          "range_uri": "http://example.org/ontology#GovernanceBody",
+          "range_label": "GovernanceBody",
+          "description": "hasGovernanceBody repeats its range GovernanceBody in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasGuidance",
+          "property_label": "hasGuidance",
+          "range_uri": "http://example.org/ontology#Guidance",
+          "range_label": "Guidance",
+          "description": "hasGuidance repeats its range Guidance in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasInitiative",
+          "property_label": "hasInitiative",
+          "range_uri": "http://example.org/ontology#Initiative",
+          "range_label": "Initiative",
+          "description": "hasInitiative repeats its range Initiative in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasManagementSystem",
+          "property_label": "hasManagementSystem",
+          "range_uri": "http://example.org/ontology#ManagementSystem",
+          "range_label": "ManagementSystem",
+          "description": "hasManagementSystem repeats its range ManagementSystem in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasOffer",
+          "property_label": "hasOffer",
+          "range_uri": "http://example.org/ontology#Offer",
+          "range_label": "Offer",
+          "description": "hasOffer repeats its range Offer in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasOrganizationalUnit",
+          "property_label": "hasOrganizationalUnit",
+          "range_uri": "http://example.org/ontology#OrganizationalUnit",
+          "range_label": "OrganizationalUnit",
+          "description": "hasOrganizationalUnit repeats its range OrganizationalUnit in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasOwnershipStructure",
+          "property_label": "hasOwnershipStructure",
+          "range_uri": "http://example.org/ontology#OwnershipStructure",
+          "range_label": "OwnershipStructure",
+          "description": "hasOwnershipStructure repeats its range OwnershipStructure in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasParentCompany",
+          "property_label": "hasParentCompany",
+          "range_uri": "http://example.org/ontology#Company",
+          "range_label": "Company",
+          "description": "hasParentCompany repeats its range Company in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasPlan",
+          "property_label": "hasPlan",
+          "range_uri": "http://example.org/ontology#Plan",
+          "range_label": "Plan",
+          "description": "hasPlan repeats its range Plan in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasPolicy",
+          "property_label": "hasPolicy",
+          "range_uri": "http://example.org/ontology#Policy",
+          "range_label": "Policy",
+          "description": "hasPolicy repeats its range Policy in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasProgram",
+          "property_label": "hasProgram",
+          "range_uri": "http://example.org/ontology#Program",
+          "range_label": "Program",
+          "description": "hasProgram repeats its range Program in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasRating",
+          "property_label": "hasRating",
+          "range_uri": "http://example.org/ontology#Rating",
+          "range_label": "Rating",
+          "description": "hasRating repeats its range Rating in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasReorganization",
+          "property_label": "hasReorganization",
+          "range_uri": "http://example.org/ontology#Reorganization",
+          "range_label": "Reorganization",
+          "description": "hasReorganization repeats its range Reorganization in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasRisk",
+          "property_label": "hasRisk",
+          "range_uri": "http://example.org/ontology#Risk",
+          "range_label": "Risk",
+          "description": "hasRisk repeats its range Risk in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasRole",
+          "property_label": "hasRole",
+          "range_uri": "http://example.org/ontology#Role",
+          "range_label": "Role",
+          "description": "hasRole repeats its range Role in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasSharePrice",
+          "property_label": "hasSharePrice",
+          "range_uri": "http://example.org/ontology#SharePrice",
+          "range_label": "SharePrice",
+          "description": "hasSharePrice repeats its range SharePrice in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasShareholding",
+          "property_label": "hasShareholding",
+          "range_uri": "http://example.org/ontology#Shareholding",
+          "range_label": "Shareholding",
+          "description": "hasShareholding repeats its range Shareholding in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasSolution",
+          "property_label": "hasSolution",
+          "range_uri": "http://example.org/ontology#Solution",
+          "range_label": "Solution",
+          "description": "hasSolution repeats its range Solution in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasTarget",
+          "property_label": "hasTarget",
+          "range_uri": "http://example.org/ontology#Target",
+          "range_label": "Target",
+          "description": "hasTarget repeats its range Target in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#hasWhistleblowingSystem",
+          "property_label": "hasWhistleblowingSystem",
+          "range_uri": "http://example.org/ontology#WhistleblowingSystem",
+          "range_label": "WhistleblowingSystem",
+          "description": "hasWhistleblowingSystem repeats its range WhistleblowingSystem in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#meetsMilestone",
+          "property_label": "meetsMilestone",
+          "range_uri": "http://example.org/ontology#Milestone",
+          "range_label": "Milestone",
+          "description": "meetsMilestone repeats its range Milestone in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#organizesEvent",
+          "property_label": "organizesEvent",
+          "range_uri": "http://example.org/ontology#Event",
+          "range_label": "Event",
+          "description": "organizesEvent repeats its range Event in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#posesRisk",
+          "property_label": "posesRisk",
+          "range_uri": "http://example.org/ontology#Risk",
+          "range_label": "Risk",
+          "description": "posesRisk repeats its range Risk in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#referencesStandard",
+          "property_label": "referencesStandard",
+          "range_uri": "http://example.org/ontology#Standard",
+          "range_label": "Standard",
+          "description": "referencesStandard repeats its range Standard in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#usesMethodology",
+          "property_label": "usesMethodology",
+          "range_uri": "http://example.org/ontology#Methodology",
+          "range_label": "Methodology",
+          "description": "usesMethodology repeats its range Methodology in the property name."
+        },
+        {
+          "property_uri": "http://example.org/ontology#usesPlatform",
+          "property_label": "usesPlatform",
+          "range_uri": "http://example.org/ontology#Platform",
+          "range_label": "Platform",
+          "description": "usesPlatform repeats its range Platform in the property name."
+        }
+      ]
+    },
+    "P3.3": {
+      "count": 0,
+      "ratio": 0.0,
+      "items": []
+    },
+    "P4.1": {
+      "count": 11,
+      "ratio": 0.030470914127423823,
+      "items": [
+        {
+          "class_uri": "http://example.org/ontology#AbstractConcept",
+          "class_label": "AbstractConcept",
+          "tokens": [
+            "Abstract",
+            "Concept"
+          ],
+          "distance": 0,
+          "description": "AbstractConcept appears overly generic (distance 0 from top-level concepts)."
+        },
+        {
+          "class_uri": "http://example.org/ontology#BusinessConcept",
+          "class_label": "BusinessConcept",
+          "tokens": [
+            "Business",
+            "Concept"
+          ],
+          "distance": 0,
+          "description": "BusinessConcept appears overly generic (distance 0 from top-level concepts)."
+        },
+        {
+          "class_uri": "http://example.org/ontology#ConcreteEntity",
+          "class_label": "ConcreteEntity",
+          "tokens": [
+            "Concrete",
+            "Entity"
+          ],
+          "distance": 0,
+          "description": "ConcreteEntity appears overly generic (distance 0 from top-level concepts)."
+        },
+        {
+          "class_uri": "http://example.org/ontology#GeopoliticalEntity",
+          "class_label": "GeopoliticalEntity",
+          "tokens": [
+            "Geopolitical",
+            "Entity"
+          ],
+          "distance": 0,
+          "description": "GeopoliticalEntity appears overly generic (distance 0 from top-level concepts)."
+        },
+        {
+          "class_uri": "http://example.org/ontology#GovernanceEntity",
+          "class_label": "GovernanceEntity",
+          "tokens": [
+            "Governance",
+            "Entity"
+          ],
+          "distance": 0,
+          "description": "GovernanceEntity appears overly generic (distance 0 from top-level concepts)."
+        },
+        {
+          "class_uri": "http://example.org/ontology#InformationContentEntity",
+          "class_label": "InformationContentEntity",
+          "tokens": [
+            "Information",
+            "Content",
+            "Entity"
+          ],
+          "distance": 0,
+          "description": "InformationContentEntity appears overly generic (distance 0 from top-level concepts)."
+        },
+        {
+          "class_uri": "http://example.org/ontology#TemporalEntity",
+          "class_label": "TemporalEntity",
+          "tokens": [
+            "Temporal",
+            "Entity"
+          ],
+          "distance": 0,
+          "description": "TemporalEntity appears overly generic (distance 0 from top-level concepts)."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Rule",
+          "class_label": "Rule",
+          "tokens": [
+            "Rule"
+          ],
+          "distance": 1,
+          "description": "Rule appears overly generic (distance 1 from top-level concepts)."
+        },
+        {
+          "class_uri": "http://example.org/ontology#DocumentPart",
+          "class_label": "DocumentPart",
+          "tokens": [
+            "Document",
+            "Part"
+          ],
+          "distance": 2,
+          "description": "DocumentPart appears overly generic (distance 2 from top-level concepts)."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Event",
+          "class_label": "Event",
+          "tokens": [
+            "Event"
+          ],
+          "distance": 2,
+          "description": "Event appears overly generic (distance 2 from top-level concepts)."
+        },
+        {
+          "class_uri": "http://example.org/ontology#Framework",
+          "class_label": "Framework",
+          "tokens": [
+            "Framework"
+          ],
+          "distance": 2,
+          "description": "Framework appears overly generic (distance 2 from top-level concepts)."
+        }
+      ],
+      "distance_buckets": {
+        "0": [
+          "AbstractConcept",
+          "BusinessConcept",
+          "ConcreteEntity",
+          "GeopoliticalEntity",
+          "GovernanceEntity",
+          "InformationContentEntity",
+          "TemporalEntity"
+        ],
+        "1": [
+          "Rule"
+        ],
+        "2": [
+          "DocumentPart",
+          "Event",
+          "Framework"
+        ]
+      }
+    },
+    "P4.2": {
+      "threshold": 0.8,
+      "count": 5,
+      "ratio": 0.013850415512465374,
+      "items": [
+        {
+          "class_1_uri": "http://example.org/ontology#RegenerativeAgriculture",
+          "class_1_label": "Regenerative Agriculture",
+          "class_2_uri": "http://example.org/ontology#RegenerativeAgriculturePractice",
+          "class_2_label": "Regenerative Agriculture Practice",
+          "label_similarity": 0.9565082788467407,
+          "description_similarity": 0.7847689390182495,
+          "combined_similarity": 0.8534647226333618,
+          "description": "Regenerative Agriculture and Regenerative Agriculture Practice may be synonyms (combined similarity 0.85)."
+        },
+        {
+          "class_1_uri": "http://example.org/ontology#BoardCommittee",
+          "class_1_label": "Board Committee",
+          "class_2_uri": "http://example.org/ontology#GovernanceCommittee",
+          "class_2_label": "Governance Committee",
+          "label_similarity": 0.8208929300308228,
+          "description_similarity": 0.8685932755470276,
+          "combined_similarity": 0.8495131731033325,
+          "description": "Board Committee and Governance Committee may be synonyms (combined similarity 0.85)."
+        },
+        {
+          "class_1_uri": "http://example.org/ontology#LowCarbonCommercialSolution",
+          "class_1_label": "Low Carbon Commercial Solution",
+          "class_2_uri": "http://example.org/ontology#LowCarbonSolution",
+          "class_2_label": "Low Carbon Solution",
+          "label_similarity": 0.8346728086471558,
+          "description_similarity": 0.8300857543945312,
+          "combined_similarity": 0.8319206237792969,
+          "description": "Low Carbon Commercial Solution and Low Carbon Solution may be synonyms (combined similarity 0.83)."
+        },
+        {
+          "class_1_uri": "http://example.org/ontology#GovernanceBody",
+          "class_1_label": "Governance Body",
+          "class_2_uri": "http://example.org/ontology#GovernanceEntity",
+          "class_2_label": "Governance Entity",
+          "label_similarity": 0.8078453540802002,
+          "description_similarity": 0.8145848512649536,
+          "combined_similarity": 0.8118890523910522,
+          "description": "Governance Body and Governance Entity may be synonyms (combined similarity 0.81)."
+        },
+        {
+          "class_1_uri": "http://example.org/ontology#RenewableElectricity",
+          "class_1_label": "Renewable Electricity",
+          "class_2_uri": "http://example.org/ontology#RenewableEnergy",
+          "class_2_label": "Renewable Energy",
+          "label_similarity": 0.9346120357513428,
+          "description_similarity": 0.7215940952301025,
+          "combined_similarity": 0.8068013191223145,
+          "description": "Renewable Electricity and Renewable Energy may be synonyms (combined similarity 0.81)."
+        }
+      ]
+    },
+    "P4.3": {
+      "sim_threshold": 0.1,
+      "polarity_threshold": 0.3,
+      "count": 29,
+      "ratio": 0.08033240997229917,
+      "items": [
+        {
+          "parent_uri": "http://example.org/ontology#Report",
+          "parent_label": "Report",
+          "child_uri": "http://example.org/ontology#UniversalRegistrationDocument",
+          "child_label": "Universal Registration Document",
+          "reason": "low similarity",
+          "similarity": 0.0513806976377964,
+          "polarity_distance": 0.0,
+          "description": "Universal Registration Document may conflict with parent Report (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Wrongdoing",
+          "parent_label": "Wrongdoing",
+          "child_uri": "http://example.org/ontology#AssetProtection",
+          "child_label": "Asset Protection",
+          "reason": "low similarity",
+          "similarity": 0.08591819554567337,
+          "polarity_distance": 0.1806,
+          "description": "Asset Protection may conflict with parent Wrongdoing (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Wrongdoing",
+          "parent_label": "Wrongdoing",
+          "child_uri": "http://example.org/ontology#ParallelDistribution",
+          "child_label": "Parallel Distribution",
+          "reason": "low similarity",
+          "similarity": 0.005860455334186554,
+          "polarity_distance": 0.0,
+          "description": "Parallel Distribution may conflict with parent Wrongdoing (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Process",
+          "parent_label": "Process",
+          "child_uri": "http://example.org/ontology#RegenerativeAgriculturePractice",
+          "child_label": "Regenerative Agriculture Practice",
+          "reason": "low similarity",
+          "similarity": 0.08684538304805756,
+          "polarity_distance": 0.0,
+          "description": "Regenerative Agriculture Practice may conflict with parent Process (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#AbstractConcept",
+          "parent_label": "Abstract Concept",
+          "child_uri": "http://example.org/ontology#Index",
+          "child_label": "Index",
+          "reason": "low similarity",
+          "similarity": 0.07831120491027832,
+          "polarity_distance": 0.0,
+          "description": "Index may conflict with parent Abstract Concept (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#AbstractConcept",
+          "parent_label": "Abstract Concept",
+          "child_uri": "http://example.org/ontology#Plan",
+          "child_label": "Plan",
+          "reason": "low similarity",
+          "similarity": 0.08846685290336609,
+          "polarity_distance": 0.0,
+          "description": "Plan may conflict with parent Abstract Concept (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Service",
+          "parent_label": "Service",
+          "child_uri": "http://example.org/ontology#BusinessSector",
+          "child_label": "Business Sector",
+          "reason": "antonym 'disservice' similar to second label",
+          "similarity": 0.3967011570930481,
+          "polarity_distance": 0.0,
+          "description": "Business Sector may conflict with parent Service (antonym 'disservice' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Service",
+          "parent_label": "Service",
+          "child_uri": "http://example.org/ontology#DigitalService",
+          "child_label": "Digital Service",
+          "reason": "antonym 'disservice' similar to second label",
+          "similarity": 0.6555994153022766,
+          "polarity_distance": 0.0,
+          "description": "Digital Service may conflict with parent Service (antonym 'disservice' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Service",
+          "parent_label": "Service",
+          "child_uri": "http://example.org/ontology#Engineering",
+          "child_label": "Engineering",
+          "reason": "antonym 'disservice' similar to second label",
+          "similarity": 0.2657391130924225,
+          "polarity_distance": 0.0,
+          "description": "Engineering may conflict with parent Service (antonym 'disservice' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Service",
+          "parent_label": "Service",
+          "child_uri": "http://example.org/ontology#Healthcare",
+          "child_label": "Healthcare",
+          "reason": "antonym 'disservice' similar to second label",
+          "similarity": 0.4714551270008087,
+          "polarity_distance": 0.0,
+          "description": "Healthcare may conflict with parent Service (antonym 'disservice' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Service",
+          "parent_label": "Service",
+          "child_uri": "http://example.org/ontology#Maintenance",
+          "child_label": "Maintenance",
+          "reason": "antonym 'disservice' similar to second label",
+          "similarity": 0.5162510871887207,
+          "polarity_distance": 0.0,
+          "description": "Maintenance may conflict with parent Service (antonym 'disservice' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Situation",
+          "parent_label": "Situation",
+          "child_uri": "http://example.org/ontology#Shareholding",
+          "child_label": "Shareholding",
+          "reason": "low similarity",
+          "similarity": 0.07870525121688843,
+          "polarity_distance": 0.0,
+          "description": "Shareholding may conflict with parent Situation (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#HumanRightsImpact",
+          "parent_label": "Human Rights Impact",
+          "child_uri": "http://example.org/ontology#Violence",
+          "child_label": "Violence",
+          "reason": "opposite polarity",
+          "similarity": 0.32523399591445923,
+          "polarity_distance": 0.31245,
+          "description": "Violence may conflict with parent Human Rights Impact (opposite polarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Place",
+          "parent_label": "Place",
+          "child_uri": "http://example.org/ontology#City",
+          "child_label": "City",
+          "reason": "antonym 'divest' similar to second label",
+          "similarity": 0.5579471588134766,
+          "polarity_distance": 0.0,
+          "description": "City may conflict with parent Place (antonym 'divest' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Place",
+          "parent_label": "Place",
+          "child_uri": "http://example.org/ontology#Facility",
+          "child_label": "Facility",
+          "reason": "antonym 'divest' similar to second label",
+          "similarity": 0.6467349529266357,
+          "polarity_distance": 0.0,
+          "description": "Facility may conflict with parent Place (antonym 'divest' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Place",
+          "parent_label": "Place",
+          "child_uri": "http://example.org/ontology#Park",
+          "child_label": "Park",
+          "reason": "antonym 'divest' similar to second label",
+          "similarity": 0.4913173019886017,
+          "polarity_distance": 0.0,
+          "description": "Park may conflict with parent Place (antonym 'divest' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Place",
+          "parent_label": "Place",
+          "child_uri": "http://example.org/ontology#Site",
+          "child_label": "Site",
+          "reason": "antonym 'divest' similar to second label",
+          "similarity": 0.5036076307296753,
+          "polarity_distance": 0.0,
+          "description": "Site may conflict with parent Place (antonym 'divest' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Engineering",
+          "parent_label": "Engineering",
+          "child_uri": "http://example.org/ontology#Refrigeration",
+          "child_label": "Refrigeration",
+          "reason": "low similarity",
+          "similarity": 0.08732788264751434,
+          "polarity_distance": 0.0,
+          "description": "Refrigeration may conflict with parent Engineering (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Topic",
+          "parent_label": "Topic",
+          "child_uri": "http://example.org/ontology#DeforestationFreePrimarySupplyChain",
+          "child_label": "Deforestation Free Primary Supply Chain",
+          "reason": "low similarity",
+          "similarity": 0.0022703688591718674,
+          "polarity_distance": 0.2553,
+          "description": "Deforestation Free Primary Supply Chain may conflict with parent Topic (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Topic",
+          "parent_label": "Topic",
+          "child_uri": "http://example.org/ontology#GhgEmissions",
+          "child_label": "Ghg Emissions",
+          "reason": "low similarity",
+          "similarity": 0.08854897320270538,
+          "polarity_distance": 0.0,
+          "description": "Ghg Emissions may conflict with parent Topic (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Topic",
+          "parent_label": "Topic",
+          "child_uri": "http://example.org/ontology#RegenerativeAgriculture",
+          "child_label": "Regenerative Agriculture",
+          "reason": "low similarity",
+          "similarity": 0.058068156242370605,
+          "polarity_distance": 0.0,
+          "description": "Regenerative Agriculture may conflict with parent Topic (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Topic",
+          "parent_label": "Topic",
+          "child_uri": "http://example.org/ontology#UnhealthyDiet",
+          "child_label": "Unhealthy Diet",
+          "reason": "low similarity",
+          "similarity": 0.022340744733810425,
+          "polarity_distance": 0.26335,
+          "description": "Unhealthy Diet may conflict with parent Topic (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#IntangibleProduct",
+          "parent_label": "Intangible Product",
+          "child_uri": "http://example.org/ontology#Offer",
+          "child_label": "Offer",
+          "reason": "low similarity",
+          "similarity": 0.07811704277992249,
+          "polarity_distance": 0.0,
+          "description": "Offer may conflict with parent Intangible Product (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#IntangibleProduct",
+          "parent_label": "Intangible Product",
+          "child_uri": "http://example.org/ontology#Platform",
+          "child_label": "Platform",
+          "reason": "low similarity",
+          "similarity": 0.06955812126398087,
+          "polarity_distance": 0.0,
+          "description": "Platform may conflict with parent Intangible Product (low similarity)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Corruption",
+          "parent_label": "Corruption",
+          "child_uri": "http://example.org/ontology#FacilitationPayment",
+          "child_label": "Facilitation Payment",
+          "reason": "antonym 'incorruptness' similar to second label",
+          "similarity": 0.16863000392913818,
+          "polarity_distance": 0.0,
+          "description": "Facilitation Payment may conflict with parent Corruption (antonym 'incorruptness' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Corruption",
+          "parent_label": "Corruption",
+          "child_uri": "http://example.org/ontology#InfluencePeddling",
+          "child_label": "Influence Peddling",
+          "reason": "antonym 'incorruptness' similar to second label",
+          "similarity": 0.3035958409309387,
+          "polarity_distance": 0.0,
+          "description": "Influence Peddling may conflict with parent Corruption (antonym 'incorruptness' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Agreement",
+          "parent_label": "Agreement",
+          "child_uri": "http://example.org/ontology#FrameworkAgreement",
+          "child_label": "Framework Agreement",
+          "reason": "antonym 'disagreement' similar to second label",
+          "similarity": 0.5877948999404907,
+          "polarity_distance": 0.0,
+          "description": "Framework Agreement may conflict with parent Agreement (antonym 'disagreement' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Agreement",
+          "parent_label": "Agreement",
+          "child_uri": "http://example.org/ontology#InternationalAgreement",
+          "child_label": "International Agreement",
+          "reason": "antonym 'disagreement' similar to second label",
+          "similarity": 0.6934036016464233,
+          "polarity_distance": 0.0,
+          "description": "International Agreement may conflict with parent Agreement (antonym 'disagreement' similar to second label)."
+        },
+        {
+          "parent_uri": "http://example.org/ontology#Agreement",
+          "parent_label": "Agreement",
+          "child_uri": "http://example.org/ontology#PowerPurchaseAgreement",
+          "child_label": "Power Purchase Agreement",
+          "reason": "antonym 'disagreement' similar to second label",
+          "similarity": 0.5280667543411255,
+          "polarity_distance": 0.0,
+          "description": "Power Purchase Agreement may conflict with parent Agreement (antonym 'disagreement' similar to second label)."
+        }
+      ]
+    },
+    "P4.4": {
+      "sim_threshold": 0.8,
+      "count": 1,
+      "ratio": 0.002770083102493075,
+      "items": [
+        {
+          "parent_uri": "http://example.org/ontology#GovernanceEntity",
+          "child_uri": "http://example.org/ontology#GovernanceBody",
+          "parent_label": "Governance Entity",
+          "child_label": "Governance Body",
+          "semantic_similarity": 0.8118890523910522,
+          "shared_domain_count": 0,
+          "shared_range_count": 0,
+          "shared_domain_props": [],
+          "shared_range_props": [],
+          "description": "Governance Body is semantically very close to parent Governance Entity (similarity 0.81)."
+        }
+      ]
+    },
+    "P4.5": {
+      "threshold": 0.8,
+      "quantiles": {
+        "q90": 0.35330383479595184,
+        "q95": 0.4071572721004486,
+        "q98": 0.4817990452051166,
+        "q99": 0.5361116975545883
+      },
+      "total_count": 18,
+      "returned_count": 18,
+      "ratio": 0.05921052631578947,
+      "items": [
+        {
+          "p1_uri": "http://example.org/ontology#hasAffordableMicronutrientFortifiedServings",
+          "p2_uri": "http://example.org/ontology#hasMicronutrientFortifiedServings",
+          "p1_label": "has Affordable Micronutrient Fortified Servings",
+          "p2_label": "has Micronutrient Fortified Servings",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.9590890407562256,
+          "description_similarity": 0.8396146297454834,
+          "combined_similarity": 0.9232467412948608,
+          "description": "has Affordable Micronutrient Fortified Servings and has Micronutrient Fortified Servings may be synonymous properties (combined similarity 0.92)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasRenewableEnergyShare",
+          "p2_uri": "http://example.org/ontology#hasRenewableEnergyShareValue",
+          "p1_label": "has Renewable Energy Share",
+          "p2_label": "has Renewable Energy Share Value",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.9251253604888916,
+          "description_similarity": 0.8719402551651001,
+          "combined_similarity": 0.9091697931289673,
+          "description": "has Renewable Energy Share and has Renewable Energy Share Value may be synonymous properties (combined similarity 0.91)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasGhgNetReduction",
+          "p2_uri": "http://example.org/ontology#hasGhgReduction",
+          "p1_label": "has Ghg Net Reduction",
+          "p2_label": "has Ghg Reduction",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.891207218170166,
+          "description_similarity": 0.9466100931167603,
+          "combined_similarity": 0.9078280925750732,
+          "description": "has Ghg Net Reduction and has Ghg Reduction may be synonymous properties (combined similarity 0.91)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasNetGhgEmissions",
+          "p2_uri": "http://example.org/ontology#hasTotalGhgEmissions",
+          "p1_label": "has Net Ghg Emissions",
+          "p2_label": "has Total Ghg Emissions",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.8812208771705627,
+          "description_similarity": 0.8885207176208496,
+          "combined_similarity": 0.8834108114242554,
+          "description": "has Net Ghg Emissions and has Total Ghg Emissions may be synonymous properties (combined similarity 0.88)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasChemicalOxygenDemandConcentration",
+          "p2_uri": "http://example.org/ontology#hasChemicalOxygenDemandOutput",
+          "p1_label": "has Chemical Oxygen Demand Concentration",
+          "p2_label": "has Chemical Oxygen Demand Output",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.9041962623596191,
+          "description_similarity": 0.7903448343276978,
+          "combined_similarity": 0.8700408339500427,
+          "description": "has Chemical Oxygen Demand Concentration and has Chemical Oxygen Demand Output may be synonymous properties (combined similarity 0.87)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasSubsidiary",
+          "p2_uri": "http://example.org/ontology#isSubsidiaryOf",
+          "p1_label": "has Subsidiary",
+          "p2_label": "is Subsidiary Of",
+          "p1_type": "ObjectProperty",
+          "p2_type": "ObjectProperty",
+          "label_similarity": 0.8735413551330566,
+          "description_similarity": 0.8569415211677551,
+          "combined_similarity": 0.8685613870620728,
+          "description": "has Subsidiary and is Subsidiary Of may be synonymous properties (combined similarity 0.87)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasGhgReduction",
+          "p2_uri": "http://example.org/ontology#hasGhgReductionTarget",
+          "p1_label": "has Ghg Reduction",
+          "p2_label": "has Ghg Reduction Target",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.9300625324249268,
+          "description_similarity": 0.674189567565918,
+          "combined_similarity": 0.8533006310462952,
+          "description": "has Ghg Reduction and has Ghg Reduction Target may be synonymous properties (combined similarity 0.85)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasFossilFuelPercentage",
+          "p2_uri": "http://example.org/ontology#hasFossilFuelShare",
+          "p1_label": "has Fossil Fuel Percentage",
+          "p2_label": "has Fossil Fuel Share",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.8204113245010376,
+          "description_similarity": 0.8979965448379517,
+          "combined_similarity": 0.8436868786811829,
+          "description": "has Fossil Fuel Percentage and has Fossil Fuel Share may be synonymous properties (combined similarity 0.84)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasInvestee",
+          "p2_uri": "http://example.org/ontology#hasInvestor",
+          "p1_label": "has Investee",
+          "p2_label": "has Investor",
+          "p1_type": "ObjectProperty",
+          "p2_type": "ObjectProperty",
+          "label_similarity": 0.7793393731117249,
+          "description_similarity": 0.9771536588668823,
+          "combined_similarity": 0.8386836051940918,
+          "description": "has Investee and has Investor may be synonymous properties (combined similarity 0.84)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasAdditionalMemberCount",
+          "p2_uri": "http://example.org/ontology#hasMemberCount",
+          "p1_label": "has Additional Member Count",
+          "p2_label": "has Member Count",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.9169560074806213,
+          "description_similarity": 0.6061667799949646,
+          "combined_similarity": 0.8237192630767822,
+          "description": "has Additional Member Count and has Member Count may be synonymous properties (combined similarity 0.82)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasNumberOfEmployees",
+          "p2_uri": "http://example.org/ontology#hasTotalEmployees",
+          "p1_label": "has Number Of Employees",
+          "p2_label": "has Total Employees",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.8465003967285156,
+          "description_similarity": 0.7654135823249817,
+          "combined_similarity": 0.8221743702888489,
+          "description": "has Number Of Employees and has Total Employees may be synonymous properties (combined similarity 0.82)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasCeo",
+          "p2_uri": "http://example.org/ontology#hasDeputyCeo",
+          "p1_label": "has Ceo",
+          "p2_label": "has Deputy Ceo",
+          "p1_type": "ObjectProperty",
+          "p2_type": "ObjectProperty",
+          "label_similarity": 0.7905591726303101,
+          "description_similarity": 0.8906245827674866,
+          "combined_similarity": 0.8205788135528564,
+          "description": "has Ceo and has Deputy Ceo may be synonymous properties (combined similarity 0.82)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasWaterConsumedInHighStressRegions",
+          "p2_uri": "http://example.org/ontology#hasWaterWithdrawnInHighStressRegions",
+          "p1_label": "has Water Consumed In High Stress Regions",
+          "p2_label": "has Water Withdrawn In High Stress Regions",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.7837058305740356,
+          "description_similarity": 0.8846954107284546,
+          "combined_similarity": 0.8140026926994324,
+          "description": "has Water Consumed In High Stress Regions and has Water Withdrawn In High Stress Regions may be synonymous properties (combined similarity 0.81)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasFirstPublicationYear",
+          "p2_uri": "http://example.org/ontology#hasPublicationYear",
+          "p1_label": "has First Publication Year",
+          "p2_label": "has Publication Year",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.8840771913528442,
+          "description_similarity": 0.6466095447540283,
+          "combined_similarity": 0.8128368854522705,
+          "description": "has First Publication Year and has Publication Year may be synonymous properties (combined similarity 0.81)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasRenewableElectricityAchievement",
+          "p2_uri": "http://example.org/ontology#hasRenewableElectricityTarget",
+          "p1_label": "has Renewable Electricity Achievement",
+          "p2_label": "has Renewable Electricity Target",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.8568862676620483,
+          "description_similarity": 0.6959900856018066,
+          "combined_similarity": 0.8086174130439758,
+          "description": "has Renewable Electricity Achievement and has Renewable Electricity Target may be synonymous properties (combined similarity 0.81)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#hasUpdateDate",
+          "p2_uri": "http://example.org/ontology#hasUpdateYear",
+          "p1_label": "has Update Date",
+          "p2_label": "has Update Year",
+          "p1_type": "DatatypeProperty",
+          "p2_type": "DatatypeProperty",
+          "label_similarity": 0.7546496391296387,
+          "description_similarity": 0.9193000793457031,
+          "combined_similarity": 0.804044783115387,
+          "description": "has Update Date and has Update Year may be synonymous properties (combined similarity 0.80)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#isSubjectOf",
+          "p2_uri": "http://example.org/ontology#wasSubjectOf",
+          "p1_label": "is Subject Of",
+          "p2_label": "was Subject Of",
+          "p1_type": "ObjectProperty",
+          "p2_type": "ObjectProperty",
+          "label_similarity": 0.9020083546638489,
+          "description_similarity": 0.5691589117050171,
+          "combined_similarity": 0.8021535277366638,
+          "description": "is Subject Of and was Subject Of may be synonymous properties (combined similarity 0.80)."
+        },
+        {
+          "p1_uri": "http://example.org/ontology#isAuditOf",
+          "p2_uri": "http://example.org/ontology#isAuditedBy",
+          "p1_label": "is Audit Of",
+          "p2_label": "is Audited By",
+          "p1_type": "ObjectProperty",
+          "p2_type": "ObjectProperty",
+          "label_similarity": 0.8794873952865601,
+          "description_similarity": 0.6175140738487244,
+          "combined_similarity": 0.8008953928947449,
+          "description": "is Audit Of and is Audited By may be synonymous properties (combined similarity 0.80)."
+        }
+      ]
+    },
+    "P4.6": {
+      "threshold": 0.8,
+      "count": 1,
+      "ratio": 0.003289473684210526,
+      "items": [
+        {
+          "p1_uri": "http://example.org/ontology#hasSubsidiary",
+          "p2_uri": "http://example.org/ontology#isSubsidiaryOf",
+          "p1_label": "has Subsidiary",
+          "p2_label": "is Subsidiary Of",
+          "combined_similarity": 0.8685613870620728,
+          "domain_swapped": true,
+          "p1_domain": [
+            "Company"
+          ],
+          "p1_range": [
+            "Company"
+          ],
+          "p2_domain": [
+            "Company"
+          ],
+          "p2_range": [
+            "Company"
+          ],
+          "description": "has Subsidiary and is Subsidiary Of may be undeclared inverse properties with swapped domain/range (similarity 0.87)."
+        }
+      ]
+    },
+    "P4.7": {
+      "count": 5,
+      "ratio": 0.035211267605633804,
+      "items": [
+        {
+          "short_uri": "http://example.org/ontology#hasDate",
+          "long_uri": "http://example.org/ontology#hasDateString",
+          "short_label": "hasDate",
+          "long_label": "hasDateString",
+          "description": "hasDate overlaps with hasDateString and may hide an object-property relation."
+        },
+        {
+          "short_uri": "http://example.org/ontology#hasGhgReduction",
+          "long_uri": "http://example.org/ontology#hasGhgReductionTarget",
+          "short_label": "hasGhgReduction",
+          "long_label": "hasGhgReductionTarget",
+          "description": "hasGhgReduction overlaps with hasGhgReductionTarget and may hide an object-property relation."
+        },
+        {
+          "short_uri": "http://example.org/ontology#hasRenewableEnergyShare",
+          "long_uri": "http://example.org/ontology#hasRenewableEnergyShareValue",
+          "short_label": "hasRenewableEnergyShare",
+          "long_label": "hasRenewableEnergyShareValue",
+          "description": "hasRenewableEnergyShare overlaps with hasRenewableEnergyShareValue and may hide an object-property relation."
+        },
+        {
+          "short_uri": "http://example.org/ontology#hasScope",
+          "long_uri": "http://example.org/ontology#hasScopeThreeFlagGhgReductionTarget",
+          "short_label": "hasScope",
+          "long_label": "hasScopeThreeFlagGhgReductionTarget",
+          "description": "hasScope overlaps with hasScopeThreeFlagGhgReductionTarget and may hide an object-property relation."
+        },
+        {
+          "short_uri": "http://example.org/ontology#hasYear",
+          "long_uri": "http://example.org/ontology#hasYearMonth",
+          "short_label": "hasYear",
+          "long_label": "hasYearMonth",
+          "description": "hasYear overlaps with hasYearMonth and may hide an object-property relation."
+        }
+      ]
+    }
+  },
+  "grouped_results": {
+    "Logical Issues": {
+      "P1.1": {
+        "title": "Parent disjoint with children",
+        "result": {
+          "count": 1,
+          "ratio": 0.002770083102493075,
+          "items": [
+            {
+              "parent_uri": "http://example.org/ontology#Plan",
+              "parent_label": "Plan",
+              "child_uri": "http://example.org/ontology#Program",
+              "child_label": "Program",
+              "description": "Program is child of Plan even though they are disjoint."
+            }
+          ]
+        }
+      },
+      "P1.2": {
+        "title": "Entity as subclass of both parent and grandparent",
+        "result": {
+          "count": 1,
+          "ratio": 0.002770083102493075,
+          "items": [
+            {
+              "child_uri": "http://example.org/ontology#Auditor",
+              "parent_uri": "http://example.org/ontology#ProfessionalServicesFirm",
+              "grandparent_uri": "http://example.org/ontology#Company",
+              "child_label": "Auditor",
+              "parent_label": "Professional Services Firm",
+              "grandparent_label": "Company",
+              "description": "Auditor is subclass of both Professional Services Firm and Company."
+            }
+          ]
+        }
+      },
+      "P1.3": {
+        "title": "Logical inconsistencies",
+        "result": {
+          "ontology_uri": "http://example.org/ontology#",
+          "count": 0,
+          "ratio": 0.0,
+          "items": []
+        }
+      }
+    },
+    "Structural Issues": {
+      "P2.1": {
+        "title": "Not connected hierarchies",
+        "result": {
+          "count": 28,
+          "ratio": 0.07756232686980609,
+          "items": [
+            {
+              "class_uri": "http://example.org/ontology#BuildingMaterial",
+              "class_label": "BuildingMaterial",
+              "missing_parent_uri": "http://example.org/ontology#Material",
+              "missing_parent_label": "Material",
+              "shared_token": "Material",
+              "description": "BuildingMaterial is not child of Material."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ConstructionMaterial",
+              "class_label": "ConstructionMaterial",
+              "missing_parent_uri": "http://example.org/ontology#Material",
+              "missing_parent_label": "Material",
+              "shared_token": "Material",
+              "description": "ConstructionMaterial is not child of Material."
+            },
+            {
+              "class_uri": "http://example.org/ontology#RawMaterial",
+              "class_label": "RawMaterial",
+              "missing_parent_uri": "http://example.org/ontology#Material",
+              "missing_parent_label": "Material",
+              "shared_token": "Material",
+              "description": "RawMaterial is not child of Material."
+            },
+            {
+              "class_uri": "http://example.org/ontology#StrategicRawMaterial",
+              "class_label": "StrategicRawMaterial",
+              "missing_parent_uri": "http://example.org/ontology#Material",
+              "missing_parent_label": "Material",
+              "shared_token": "Material",
+              "description": "StrategicRawMaterial is not child of Material."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ClimateTransitionPlan",
+              "class_label": "ClimateTransitionPlan",
+              "missing_parent_uri": "http://example.org/ontology#Plan",
+              "missing_parent_label": "Plan",
+              "shared_token": "Plan",
+              "description": "ClimateTransitionPlan is not child of Plan."
+            },
+            {
+              "class_uri": "http://example.org/ontology#IncentivePlan",
+              "class_label": "IncentivePlan",
+              "missing_parent_uri": "http://example.org/ontology#Plan",
+              "missing_parent_label": "Plan",
+              "shared_token": "Plan",
+              "description": "IncentivePlan is not child of Plan."
+            },
+            {
+              "class_uri": "http://example.org/ontology#VigilancePlan",
+              "class_label": "VigilancePlan",
+              "missing_parent_uri": "http://example.org/ontology#Plan",
+              "missing_parent_label": "Plan",
+              "shared_token": "Plan",
+              "description": "VigilancePlan is not child of Plan."
+            },
+            {
+              "class_uri": "http://example.org/ontology#CoolingSystem",
+              "class_label": "CoolingSystem",
+              "missing_parent_uri": "http://example.org/ontology#System",
+              "missing_parent_label": "System",
+              "shared_token": "System",
+              "description": "CoolingSystem is not child of System."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ManagementSystem",
+              "class_label": "ManagementSystem",
+              "missing_parent_uri": "http://example.org/ontology#System",
+              "missing_parent_label": "System",
+              "shared_token": "System",
+              "description": "ManagementSystem is not child of System."
+            },
+            {
+              "class_uri": "http://example.org/ontology#MediaContent",
+              "class_label": "MediaContent",
+              "missing_parent_uri": "http://example.org/ontology#Content",
+              "missing_parent_label": "Content",
+              "shared_token": "Content",
+              "description": "MediaContent is not child of Content."
+            },
+            {
+              "class_uri": "http://example.org/ontology#MediaProgram",
+              "class_label": "MediaProgram",
+              "missing_parent_uri": "http://example.org/ontology#Program",
+              "missing_parent_label": "Program",
+              "shared_token": "Program",
+              "description": "MediaProgram is not child of Program."
+            },
+            {
+              "class_uri": "http://example.org/ontology#TrainingProgram",
+              "class_label": "TrainingProgram",
+              "missing_parent_uri": "http://example.org/ontology#Program",
+              "missing_parent_label": "Program",
+              "shared_token": "Program",
+              "description": "TrainingProgram is not child of Program."
+            },
+            {
+              "class_uri": "http://example.org/ontology#TelecomNetwork",
+              "class_label": "TelecomNetwork",
+              "missing_parent_uri": "http://example.org/ontology#Network",
+              "missing_parent_label": "Network",
+              "shared_token": "Network",
+              "description": "TelecomNetwork is not child of Network."
+            },
+            {
+              "class_uri": "http://example.org/ontology#MultiStakeholderInitiative",
+              "class_label": "MultiStakeholderInitiative",
+              "missing_parent_uri": "http://example.org/ontology#Initiative",
+              "missing_parent_label": "Initiative",
+              "shared_token": "Initiative",
+              "description": "MultiStakeholderInitiative is not child of Initiative."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ClimateOpportunity",
+              "class_label": "ClimateOpportunity",
+              "missing_parent_uri": "http://example.org/ontology#Opportunity",
+              "missing_parent_label": "Opportunity",
+              "shared_token": "Opportunity",
+              "description": "ClimateOpportunity is not child of Opportunity."
+            },
+            {
+              "class_uri": "http://example.org/ontology#WoodConstruction",
+              "class_label": "WoodConstruction",
+              "missing_parent_uri": "http://example.org/ontology#Construction",
+              "missing_parent_label": "Construction",
+              "shared_token": "Construction",
+              "description": "WoodConstruction is not child of Construction."
+            },
+            {
+              "class_uri": "http://example.org/ontology#DeforestationFreePrimarySupplyChain",
+              "class_label": "DeforestationFreePrimarySupplyChain",
+              "missing_parent_uri": "http://example.org/ontology#SupplyChain",
+              "missing_parent_label": "SupplyChain",
+              "shared_token": "Supply",
+              "description": "DeforestationFreePrimarySupplyChain is not child of SupplyChain."
+            },
+            {
+              "class_uri": "http://example.org/ontology#AdministrativeSite",
+              "class_label": "AdministrativeSite",
+              "missing_parent_uri": "http://example.org/ontology#Site",
+              "missing_parent_label": "Site",
+              "shared_token": "Site",
+              "description": "AdministrativeSite is not child of Site."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ProductionSite",
+              "class_label": "ProductionSite",
+              "missing_parent_uri": "http://example.org/ontology#Site",
+              "missing_parent_label": "Site",
+              "shared_token": "Site",
+              "description": "ProductionSite is not child of Site."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ExpertGroup",
+              "class_label": "ExpertGroup",
+              "missing_parent_uri": "http://example.org/ontology#Group",
+              "missing_parent_label": "Group",
+              "shared_token": "Group",
+              "description": "ExpertGroup is not child of Group."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ShareholderGroup",
+              "class_label": "ShareholderGroup",
+              "missing_parent_uri": "http://example.org/ontology#Group",
+              "missing_parent_label": "Group",
+              "shared_token": "Group",
+              "description": "ShareholderGroup is not child of Group."
+            },
+            {
+              "class_uri": "http://example.org/ontology#CommercialInvestment",
+              "class_label": "CommercialInvestment",
+              "missing_parent_uri": "http://example.org/ontology#Investment",
+              "missing_parent_label": "Investment",
+              "shared_token": "Investment",
+              "description": "CommercialInvestment is not child of Investment."
+            },
+            {
+              "class_uri": "http://example.org/ontology#CustomsLegislation",
+              "class_label": "CustomsLegislation",
+              "missing_parent_uri": "http://example.org/ontology#Legislation",
+              "missing_parent_label": "Legislation",
+              "shared_token": "Legislation",
+              "description": "CustomsLegislation is not child of Legislation."
+            },
+            {
+              "class_uri": "http://example.org/ontology#DeforestationFreePrimarySupplyChain",
+              "class_label": "DeforestationFreePrimarySupplyChain",
+              "missing_parent_uri": "http://example.org/ontology#PrimarySupplyChain",
+              "missing_parent_label": "PrimarySupplyChain",
+              "shared_token": "Primary",
+              "description": "DeforestationFreePrimarySupplyChain is not child of PrimarySupplyChain."
+            },
+            {
+              "class_uri": "http://example.org/ontology#EuropeanWorksCouncil",
+              "class_label": "EuropeanWorksCouncil",
+              "missing_parent_uri": "http://example.org/ontology#WorksCouncil",
+              "missing_parent_label": "WorksCouncil",
+              "shared_token": "Council",
+              "description": "EuropeanWorksCouncil is not child of WorksCouncil."
+            },
+            {
+              "class_uri": "http://example.org/ontology#PowerGenerationFacility",
+              "class_label": "PowerGenerationFacility",
+              "missing_parent_uri": "http://example.org/ontology#Facility",
+              "missing_parent_label": "Facility",
+              "shared_token": "Facility",
+              "description": "PowerGenerationFacility is not child of Facility."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ManagementPosition",
+              "class_label": "ManagementPosition",
+              "missing_parent_uri": "http://example.org/ontology#Position",
+              "missing_parent_label": "Position",
+              "shared_token": "Position",
+              "description": "ManagementPosition is not child of Position."
+            },
+            {
+              "class_uri": "http://example.org/ontology#StrategicRawMaterial",
+              "class_label": "StrategicRawMaterial",
+              "missing_parent_uri": "http://example.org/ontology#RawMaterial",
+              "missing_parent_label": "RawMaterial",
+              "shared_token": "Raw",
+              "description": "StrategicRawMaterial is not child of RawMaterial."
+            }
+          ]
+        }
+      },
+      "P2.2": {
+        "title": "Single subclass parent",
+        "result": {
+          "count": 31,
+          "ratio": 0.08587257617728532,
+          "items": [
+            {
+              "class_uri": "http://example.org/ontology#AccountingStandard",
+              "class_label": "Accounting Standard",
+              "description": "Accounting Standard has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#AudiovisualContent",
+              "class_label": "Audiovisual Content",
+              "description": "Audiovisual Content has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#BiosourcedMaterial",
+              "class_label": "Biosourced Material",
+              "description": "Biosourced Material has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ChemicalSubstance",
+              "class_label": "Chemical Substance",
+              "description": "Chemical Substance has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ConsumptionMetric",
+              "class_label": "Consumption Metric",
+              "description": "Consumption Metric has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Data",
+              "class_label": "Data",
+              "description": "Data has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#DocumentPart",
+              "class_label": "Document Part",
+              "description": "Document Part has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#EducationalInstitution",
+              "class_label": "Educational Institution",
+              "description": "Educational Institution has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#EmployeeRepresentativeBody",
+              "class_label": "Employee Representative Body",
+              "description": "Employee Representative Body has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#EnvironmentalRisk",
+              "class_label": "Environmental Risk",
+              "description": "Environmental Risk has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Equipment",
+              "class_label": "Equipment",
+              "description": "Equipment has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#FinancialMetric",
+              "class_label": "Financial Metric",
+              "description": "Financial Metric has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#FixedNetwork",
+              "class_label": "Fixed Network",
+              "description": "Fixed Network has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Framework",
+              "class_label": "Framework",
+              "description": "Framework has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Genre",
+              "class_label": "Genre",
+              "description": "Genre has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Goal",
+              "class_label": "Goal",
+              "description": "Goal has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Housing",
+              "class_label": "Housing",
+              "description": "Housing has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#LegalDocument",
+              "class_label": "Legal Document",
+              "description": "Legal Document has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Person",
+              "class_label": "Person",
+              "description": "Person has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#PhysicalAsset",
+              "class_label": "Physical Asset",
+              "description": "Physical Asset has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Platform",
+              "class_label": "Platform",
+              "description": "Platform has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Policy",
+              "class_label": "Policy",
+              "description": "Policy has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#PowerGenerationFacility",
+              "class_label": "Power Generation Facility",
+              "description": "Power Generation Facility has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ProfessionalServicesFirm",
+              "class_label": "Professional Services Firm",
+              "description": "Professional Services Firm has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#PropertyRight",
+              "class_label": "Property Right",
+              "description": "Property Right has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#RecycledMaterial",
+              "class_label": "Recycled Material",
+              "description": "Recycled Material has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Road",
+              "class_label": "Road",
+              "description": "Road has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Site",
+              "class_label": "Site",
+              "description": "Site has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#SocialIssue",
+              "class_label": "Social Issue",
+              "description": "Social Issue has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Species",
+              "class_label": "Species",
+              "description": "Species has only one direct subclass."
+            },
+            {
+              "class_uri": "http://example.org/ontology#SupplyChain",
+              "class_label": "Supply Chain",
+              "description": "Supply Chain has only one direct subclass."
+            }
+          ]
+        }
+      },
+      "P2.3": {
+        "title": "Superfluous disjointness",
+        "result": {
+          "min_similarity": 0.6,
+          "count": 7,
+          "ratio": 0.019390581717451522,
+          "items": [
+            {
+              "class_1_uri": "http://example.org/ontology#AuditCommittee",
+              "class_1_label": "Audit Committee",
+              "class_2_uri": "http://example.org/ontology#ExecutiveCommittee",
+              "class_2_label": "Executive Committee",
+              "label_similarity": 0.7086134552955627,
+              "description": "Audit Committee and Executive Committee are disjoint but semantically similar (similarity 0.71)."
+            },
+            {
+              "class_1_uri": "http://example.org/ontology#Building",
+              "class_1_label": "Building",
+              "class_2_uri": "http://example.org/ontology#ConstructionMaterial",
+              "class_2_label": "Construction Material",
+              "label_similarity": 0.6916454434394836,
+              "description": "Building and Construction Material are disjoint but semantically similar (similarity 0.69)."
+            },
+            {
+              "class_1_uri": "http://example.org/ontology#BusinessApproach",
+              "class_1_label": "Business Approach",
+              "class_2_uri": "http://example.org/ontology#BusinessModel",
+              "class_2_label": "Business Model",
+              "label_similarity": 0.691601037979126,
+              "description": "Business Approach and Business Model are disjoint but semantically similar (similarity 0.69)."
+            },
+            {
+              "class_1_uri": "http://example.org/ontology#Company",
+              "class_1_label": "Company",
+              "class_2_uri": "http://example.org/ontology#ShareholderGroup",
+              "class_2_label": "Shareholder Group",
+              "label_similarity": 0.6344015598297119,
+              "description": "Company and Shareholder Group are disjoint but semantically similar (similarity 0.63)."
+            },
+            {
+              "class_1_uri": "http://example.org/ontology#FinancialMetric",
+              "class_1_label": "Financial Metric",
+              "class_2_uri": "http://example.org/ontology#OperationalMetric",
+              "class_2_label": "Operational Metric",
+              "label_similarity": 0.6299206018447876,
+              "description": "Financial Metric and Operational Metric are disjoint but semantically similar (similarity 0.63)."
+            },
+            {
+              "class_1_uri": "http://example.org/ontology#FinancialMetric",
+              "class_1_label": "Financial Metric",
+              "class_2_uri": "http://example.org/ontology#OwnershipMetric",
+              "class_2_label": "Ownership Metric",
+              "label_similarity": 0.6152872443199158,
+              "description": "Financial Metric and Ownership Metric are disjoint but semantically similar (similarity 0.62)."
+            },
+            {
+              "class_1_uri": "http://example.org/ontology#Program",
+              "class_1_label": "Program",
+              "class_2_uri": "http://example.org/ontology#TrainingProgram",
+              "class_2_label": "Training Program",
+              "label_similarity": 0.614189088344574,
+              "description": "Program and Training Program are disjoint but semantically similar (similarity 0.61)."
+            }
+          ]
+        }
+      },
+      "P2.4": {
+        "title": "Single subproperty parent",
+        "result": {
+          "count": 9,
+          "ratio": 0.029605263157894735,
+          "items": [
+            {
+              "property_uri": "http://example.org/ontology#conductsTraining",
+              "property_label": "conducts Training",
+              "description": "conducts Training has only one direct subproperty."
+            },
+            {
+              "property_uri": "http://example.org/ontology#isBasedOn",
+              "property_label": "is Based On",
+              "description": "is Based On has only one direct subproperty."
+            },
+            {
+              "property_uri": "http://example.org/ontology#isPartOf",
+              "property_label": "is Part Of",
+              "description": "is Part Of has only one direct subproperty."
+            },
+            {
+              "property_uri": "http://example.org/ontology#oversees",
+              "property_label": "oversees",
+              "description": "oversees has only one direct subproperty."
+            },
+            {
+              "property_uri": "http://example.org/ontology#references",
+              "property_label": "references",
+              "description": "references has only one direct subproperty."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasDate",
+              "property_label": "has Date",
+              "description": "has Date has only one direct subproperty."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasPublicationYear",
+              "property_label": "has Publication Year",
+              "description": "has Publication Year has only one direct subproperty."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasStartYear",
+              "property_label": "has Start Year",
+              "description": "has Start Year has only one direct subproperty."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasValue",
+              "property_label": "has Value",
+              "description": "has Value has only one direct subproperty."
+            }
+          ]
+        }
+      },
+      "P2.5": {
+        "title": "Range/Domain expansion",
+        "result": {
+          "multi_domain_count": 13,
+          "multi_domain_ratio": 0.08024691358024691,
+          "multi_domain_items": [
+            {
+              "property_uri": "http://example.org/ontology#hasFoundingEvent",
+              "property_label": "has Founding Event",
+              "domains": [
+                "Company",
+                "Group"
+              ],
+              "common_superclasses": [
+                "Agent",
+                "Organization"
+              ],
+              "description": "has Founding Event has multiple domains (Company, Group) with shared superclasses (Agent, Organization)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasGovernanceBody",
+              "property_label": "has Governance Body",
+              "domains": [
+                "Company",
+                "Group",
+                "Organization"
+              ],
+              "common_superclasses": [
+                "Agent",
+                "Organization"
+              ],
+              "description": "has Governance Body has multiple domains (Company, Group, Organization) with shared superclasses (Agent, Organization)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasInitiative",
+              "property_label": "has Initiative",
+              "domains": [
+                "Company",
+                "Organization"
+              ],
+              "common_superclasses": [
+                "Agent",
+                "Organization"
+              ],
+              "description": "has Initiative has multiple domains (Company, Organization) with shared superclasses (Agent, Organization)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasMember",
+              "property_label": "has Member",
+              "domains": [
+                "Governance Body",
+                "Governance Entity"
+              ],
+              "common_superclasses": [
+                "Abstract Concept",
+                "Governance Entity"
+              ],
+              "description": "has Member has multiple domains (Governance Body, Governance Entity) with shared superclasses (Abstract Concept, Governance Entity)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasPolicy",
+              "property_label": "has Policy",
+              "domains": [
+                "Company",
+                "Organization"
+              ],
+              "common_superclasses": [
+                "Agent",
+                "Organization"
+              ],
+              "description": "has Policy has multiple domains (Company, Organization) with shared superclasses (Agent, Organization)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasRisk",
+              "property_label": "has Risk",
+              "domains": [
+                "Company",
+                "Group"
+              ],
+              "common_superclasses": [
+                "Agent",
+                "Organization"
+              ],
+              "description": "has Risk has multiple domains (Company, Group) with shared superclasses (Agent, Organization)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasShareholding",
+              "property_label": "has Shareholding",
+              "domains": [
+                "Company",
+                "Shareholder Group"
+              ],
+              "common_superclasses": [
+                "Agent",
+                "Organization"
+              ],
+              "description": "has Shareholding has multiple domains (Company, Shareholder Group) with shared superclasses (Agent, Organization)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasStrategy",
+              "property_label": "has Strategy",
+              "domains": [
+                "Company",
+                "Organization"
+              ],
+              "common_superclasses": [
+                "Agent",
+                "Organization"
+              ],
+              "description": "has Strategy has multiple domains (Company, Organization) with shared superclasses (Agent, Organization)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#implements",
+              "property_label": "implements",
+              "domains": [
+                "Company",
+                "Governance Body"
+              ],
+              "common_superclasses": [
+                "Agent",
+                "Organization"
+              ],
+              "description": "implements has multiple domains (Company, Governance Body) with shared superclasses (Agent, Organization)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#includes",
+              "property_label": "includes",
+              "domains": [
+                "Financial Statement",
+                "Incentive Plan",
+                "Policy",
+                "Regulatory Filing",
+                "Report Section"
+              ],
+              "common_superclasses": [
+                "Abstract Concept"
+              ],
+              "description": "includes has multiple domains (Financial Statement, Incentive Plan, Policy, Regulatory Filing, +1 more) with shared superclasses (Abstract Concept)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#isAuditedBy",
+              "property_label": "is Audited By",
+              "domains": [
+                "Company",
+                "Group"
+              ],
+              "common_superclasses": [
+                "Agent",
+                "Organization"
+              ],
+              "description": "is Audited By has multiple domains (Company, Group) with shared superclasses (Agent, Organization)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#isValidatedBy",
+              "property_label": "is Validated By",
+              "domains": [
+                "Commitment",
+                "Report",
+                "Target"
+              ],
+              "common_superclasses": [
+                "Abstract Concept"
+              ],
+              "description": "is Validated By has multiple domains (Commitment, Report, Target) with shared superclasses (Abstract Concept)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#usesMethodology",
+              "property_label": "uses Methodology",
+              "domains": [
+                "Company",
+                "Organization"
+              ],
+              "common_superclasses": [
+                "Agent",
+                "Organization"
+              ],
+              "description": "uses Methodology has multiple domains (Company, Organization) with shared superclasses (Agent, Organization)."
+            }
+          ],
+          "multi_range_count": 5,
+          "multi_range_ratio": 0.030864197530864196,
+          "multi_range_items": [
+            {
+              "property_uri": "http://example.org/ontology#advises",
+              "property_label": "advises",
+              "ranges": [
+                "Company",
+                "Governance Body"
+              ],
+              "common_superclasses": [
+                "Agent",
+                "Organization"
+              ],
+              "description": "advises has multiple ranges (Company, Governance Body) with shared superclasses (Agent, Organization)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#approves",
+              "property_label": "approves",
+              "ranges": [
+                "Governance Body",
+                "Report"
+              ],
+              "common_superclasses": [
+                "Abstract Concept"
+              ],
+              "description": "approves has multiple ranges (Governance Body, Report) with shared superclasses (Abstract Concept)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasCommittee",
+              "property_label": "has Committee",
+              "ranges": [
+                "Board Committee",
+                "Governance Committee"
+              ],
+              "common_superclasses": [
+                "Abstract Concept",
+                "Governance Entity"
+              ],
+              "description": "has Committee has multiple ranges (Board Committee, Governance Committee) with shared superclasses (Abstract Concept, Governance Entity)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasMetric",
+              "property_label": "has Metric",
+              "ranges": [
+                "Key Performance Indicator",
+                "Metric",
+                "Metric Report"
+              ],
+              "common_superclasses": [
+                "Abstract Concept"
+              ],
+              "description": "has Metric has multiple ranges (Key Performance Indicator, Metric, Metric Report) with shared superclasses (Abstract Concept)."
+            },
+            {
+              "property_uri": "http://example.org/ontology#implements",
+              "property_label": "implements",
+              "ranges": [
+                "Action Plan",
+                "Strategic Plan"
+              ],
+              "common_superclasses": [
+                "Abstract Concept",
+                "Plan"
+              ],
+              "description": "implements has multiple ranges (Action Plan, Strategic Plan) with shared superclasses (Abstract Concept, Plan)."
+            }
+          ]
+        }
+      },
+      "P2.6": {
+        "title": "Possible hierarchy among properties",
+        "result": {
+          "threshold": 0.8,
+          "already_sibling_count": 1,
+          "already_siblings_ratio": 0.003289473684210526,
+          "already_siblings": [
+            {
+              "p1_uri": "http://example.org/ontology#hasCeo",
+              "p2_uri": "http://example.org/ontology#hasDeputyCeo",
+              "p1_label": "has Ceo",
+              "p2_label": "has Deputy Ceo",
+              "combined_similarity": 0.8205788135528564,
+              "domain_matched": true,
+              "common_parent_labels": [
+                "employs"
+              ],
+              "description": "has Ceo and has Deputy Ceo are similar properties and already share parent(s): employs (similarity 0.82)."
+            }
+          ],
+          "count": 16,
+          "ratio": 0.05263157894736842,
+          "items": [
+            {
+              "p1_uri": "http://example.org/ontology#hasAffordableMicronutrientFortifiedServings",
+              "p2_uri": "http://example.org/ontology#hasMicronutrientFortifiedServings",
+              "p1_label": "has Affordable Micronutrient Fortified Servings",
+              "p2_label": "has Micronutrient Fortified Servings",
+              "combined_similarity": 0.9232467412948608,
+              "domain_matched": true,
+              "description": "has Affordable Micronutrient Fortified Servings and has Micronutrient Fortified Servings are similar properties and may need a shared parent (similarity 0.92, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasRenewableEnergyShare",
+              "p2_uri": "http://example.org/ontology#hasRenewableEnergyShareValue",
+              "p1_label": "has Renewable Energy Share",
+              "p2_label": "has Renewable Energy Share Value",
+              "combined_similarity": 0.9091697931289673,
+              "domain_matched": false,
+              "description": "has Renewable Energy Share and has Renewable Energy Share Value are similar properties and may need a shared parent (similarity 0.91, domain/range match: no)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasGhgNetReduction",
+              "p2_uri": "http://example.org/ontology#hasGhgReduction",
+              "p1_label": "has Ghg Net Reduction",
+              "p2_label": "has Ghg Reduction",
+              "combined_similarity": 0.9078280925750732,
+              "domain_matched": true,
+              "description": "has Ghg Net Reduction and has Ghg Reduction are similar properties and may need a shared parent (similarity 0.91, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasNetGhgEmissions",
+              "p2_uri": "http://example.org/ontology#hasTotalGhgEmissions",
+              "p1_label": "has Net Ghg Emissions",
+              "p2_label": "has Total Ghg Emissions",
+              "combined_similarity": 0.8834108114242554,
+              "domain_matched": true,
+              "description": "has Net Ghg Emissions and has Total Ghg Emissions are similar properties and may need a shared parent (similarity 0.88, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasChemicalOxygenDemandConcentration",
+              "p2_uri": "http://example.org/ontology#hasChemicalOxygenDemandOutput",
+              "p1_label": "has Chemical Oxygen Demand Concentration",
+              "p2_label": "has Chemical Oxygen Demand Output",
+              "combined_similarity": 0.8700408339500427,
+              "domain_matched": true,
+              "description": "has Chemical Oxygen Demand Concentration and has Chemical Oxygen Demand Output are similar properties and may need a shared parent (similarity 0.87, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasSubsidiary",
+              "p2_uri": "http://example.org/ontology#isSubsidiaryOf",
+              "p1_label": "has Subsidiary",
+              "p2_label": "is Subsidiary Of",
+              "combined_similarity": 0.8685613870620728,
+              "domain_matched": true,
+              "description": "has Subsidiary and is Subsidiary Of are similar properties and may need a shared parent (similarity 0.87, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasGhgReduction",
+              "p2_uri": "http://example.org/ontology#hasGhgReductionTarget",
+              "p1_label": "has Ghg Reduction",
+              "p2_label": "has Ghg Reduction Target",
+              "combined_similarity": 0.8533006310462952,
+              "domain_matched": true,
+              "description": "has Ghg Reduction and has Ghg Reduction Target are similar properties and may need a shared parent (similarity 0.85, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasFossilFuelPercentage",
+              "p2_uri": "http://example.org/ontology#hasFossilFuelShare",
+              "p1_label": "has Fossil Fuel Percentage",
+              "p2_label": "has Fossil Fuel Share",
+              "combined_similarity": 0.8436868786811829,
+              "domain_matched": false,
+              "description": "has Fossil Fuel Percentage and has Fossil Fuel Share are similar properties and may need a shared parent (similarity 0.84, domain/range match: no)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasInvestee",
+              "p2_uri": "http://example.org/ontology#hasInvestor",
+              "p1_label": "has Investee",
+              "p2_label": "has Investor",
+              "combined_similarity": 0.8386836051940918,
+              "domain_matched": true,
+              "description": "has Investee and has Investor are similar properties and may need a shared parent (similarity 0.84, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasAdditionalMemberCount",
+              "p2_uri": "http://example.org/ontology#hasMemberCount",
+              "p1_label": "has Additional Member Count",
+              "p2_label": "has Member Count",
+              "combined_similarity": 0.8237192630767822,
+              "domain_matched": true,
+              "description": "has Additional Member Count and has Member Count are similar properties and may need a shared parent (similarity 0.82, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasNumberOfEmployees",
+              "p2_uri": "http://example.org/ontology#hasTotalEmployees",
+              "p1_label": "has Number Of Employees",
+              "p2_label": "has Total Employees",
+              "combined_similarity": 0.8221743702888489,
+              "domain_matched": true,
+              "description": "has Number Of Employees and has Total Employees are similar properties and may need a shared parent (similarity 0.82, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasWaterConsumedInHighStressRegions",
+              "p2_uri": "http://example.org/ontology#hasWaterWithdrawnInHighStressRegions",
+              "p1_label": "has Water Consumed In High Stress Regions",
+              "p2_label": "has Water Withdrawn In High Stress Regions",
+              "combined_similarity": 0.8140026926994324,
+              "domain_matched": true,
+              "description": "has Water Consumed In High Stress Regions and has Water Withdrawn In High Stress Regions are similar properties and may need a shared parent (similarity 0.81, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasFirstPublicationYear",
+              "p2_uri": "http://example.org/ontology#hasPublicationYear",
+              "p1_label": "has First Publication Year",
+              "p2_label": "has Publication Year",
+              "combined_similarity": 0.8128368854522705,
+              "domain_matched": true,
+              "description": "has First Publication Year and has Publication Year are similar properties and may need a shared parent (similarity 0.81, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasRenewableElectricityAchievement",
+              "p2_uri": "http://example.org/ontology#hasRenewableElectricityTarget",
+              "p1_label": "has Renewable Electricity Achievement",
+              "p2_label": "has Renewable Electricity Target",
+              "combined_similarity": 0.8086174130439758,
+              "domain_matched": true,
+              "description": "has Renewable Electricity Achievement and has Renewable Electricity Target are similar properties and may need a shared parent (similarity 0.81, domain/range match: yes)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasUpdateDate",
+              "p2_uri": "http://example.org/ontology#hasUpdateYear",
+              "p1_label": "has Update Date",
+              "p2_label": "has Update Year",
+              "combined_similarity": 0.804044783115387,
+              "domain_matched": false,
+              "description": "has Update Date and has Update Year are similar properties and may need a shared parent (similarity 0.80, domain/range match: no)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#isSubjectOf",
+              "p2_uri": "http://example.org/ontology#wasSubjectOf",
+              "p1_label": "is Subject Of",
+              "p2_label": "was Subject Of",
+              "combined_similarity": 0.8021535277366638,
+              "domain_matched": false,
+              "description": "is Subject Of and was Subject Of are similar properties and may need a shared parent (similarity 0.80, domain/range match: no)."
+            }
+          ]
+        }
+      }
+    },
+    "Redundancy / Naming Issues": {
+      "P3.1": {
+        "title": "Properties replicating standard RDF ones",
+        "result": {
+          "checked_count": 304,
+          "count": 0,
+          "ratio": 0.0,
+          "items": []
+        }
+      },
+      "P3.2": {
+        "title": "Range in property title",
+        "result": {
+          "count": 39,
+          "ratio": 0.24074074074074073,
+          "items": [
+            {
+              "property_uri": "http://example.org/ontology#adoptsStandard",
+              "property_label": "adoptsStandard",
+              "range_uri": "http://example.org/ontology#Standard",
+              "range_label": "Standard",
+              "description": "adoptsStandard repeats its range Standard in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#conductsAnalysis",
+              "property_label": "conductsAnalysis",
+              "range_uri": "http://example.org/ontology#Analysis",
+              "range_label": "Analysis",
+              "description": "conductsAnalysis repeats its range Analysis in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasActionPlan",
+              "property_label": "hasActionPlan",
+              "range_uri": "http://example.org/ontology#ActionPlan",
+              "range_label": "ActionPlan",
+              "description": "hasActionPlan repeats its range ActionPlan in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasAppointment",
+              "property_label": "hasAppointment",
+              "range_uri": "http://example.org/ontology#Appointment",
+              "range_label": "Appointment",
+              "description": "hasAppointment repeats its range Appointment in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasAuditor",
+              "property_label": "hasAuditor",
+              "range_uri": "http://example.org/ontology#Auditor",
+              "range_label": "Auditor",
+              "description": "hasAuditor repeats its range Auditor in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasBusinessSegment",
+              "property_label": "hasBusinessSegment",
+              "range_uri": "http://example.org/ontology#BusinessSegment",
+              "range_label": "BusinessSegment",
+              "description": "hasBusinessSegment repeats its range BusinessSegment in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasCapitalStructure",
+              "property_label": "hasCapitalStructure",
+              "range_uri": "http://example.org/ontology#CapitalStructure",
+              "range_label": "CapitalStructure",
+              "description": "hasCapitalStructure repeats its range CapitalStructure in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasCommitment",
+              "property_label": "hasCommitment",
+              "range_uri": "http://example.org/ontology#Commitment",
+              "range_label": "Commitment",
+              "description": "hasCommitment repeats its range Commitment in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasDividend",
+              "property_label": "hasDividend",
+              "range_uri": "http://example.org/ontology#Dividend",
+              "range_label": "Dividend",
+              "description": "hasDividend repeats its range Dividend in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasFinancialReporting",
+              "property_label": "hasFinancialReporting",
+              "range_uri": "http://example.org/ontology#FinancialReporting",
+              "range_label": "FinancialReporting",
+              "description": "hasFinancialReporting repeats its range FinancialReporting in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasFinancialStatement",
+              "property_label": "hasFinancialStatement",
+              "range_uri": "http://example.org/ontology#FinancialStatement",
+              "range_label": "FinancialStatement",
+              "description": "hasFinancialStatement repeats its range FinancialStatement in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasFoundation",
+              "property_label": "hasFoundation",
+              "range_uri": "http://example.org/ontology#Foundation",
+              "range_label": "Foundation",
+              "description": "hasFoundation repeats its range Foundation in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasFramework",
+              "property_label": "hasFramework",
+              "range_uri": "http://example.org/ontology#Framework",
+              "range_label": "Framework",
+              "description": "hasFramework repeats its range Framework in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasGovernanceBody",
+              "property_label": "hasGovernanceBody",
+              "range_uri": "http://example.org/ontology#GovernanceBody",
+              "range_label": "GovernanceBody",
+              "description": "hasGovernanceBody repeats its range GovernanceBody in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasGuidance",
+              "property_label": "hasGuidance",
+              "range_uri": "http://example.org/ontology#Guidance",
+              "range_label": "Guidance",
+              "description": "hasGuidance repeats its range Guidance in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasInitiative",
+              "property_label": "hasInitiative",
+              "range_uri": "http://example.org/ontology#Initiative",
+              "range_label": "Initiative",
+              "description": "hasInitiative repeats its range Initiative in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasManagementSystem",
+              "property_label": "hasManagementSystem",
+              "range_uri": "http://example.org/ontology#ManagementSystem",
+              "range_label": "ManagementSystem",
+              "description": "hasManagementSystem repeats its range ManagementSystem in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasOffer",
+              "property_label": "hasOffer",
+              "range_uri": "http://example.org/ontology#Offer",
+              "range_label": "Offer",
+              "description": "hasOffer repeats its range Offer in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasOrganizationalUnit",
+              "property_label": "hasOrganizationalUnit",
+              "range_uri": "http://example.org/ontology#OrganizationalUnit",
+              "range_label": "OrganizationalUnit",
+              "description": "hasOrganizationalUnit repeats its range OrganizationalUnit in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasOwnershipStructure",
+              "property_label": "hasOwnershipStructure",
+              "range_uri": "http://example.org/ontology#OwnershipStructure",
+              "range_label": "OwnershipStructure",
+              "description": "hasOwnershipStructure repeats its range OwnershipStructure in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasParentCompany",
+              "property_label": "hasParentCompany",
+              "range_uri": "http://example.org/ontology#Company",
+              "range_label": "Company",
+              "description": "hasParentCompany repeats its range Company in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasPlan",
+              "property_label": "hasPlan",
+              "range_uri": "http://example.org/ontology#Plan",
+              "range_label": "Plan",
+              "description": "hasPlan repeats its range Plan in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasPolicy",
+              "property_label": "hasPolicy",
+              "range_uri": "http://example.org/ontology#Policy",
+              "range_label": "Policy",
+              "description": "hasPolicy repeats its range Policy in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasProgram",
+              "property_label": "hasProgram",
+              "range_uri": "http://example.org/ontology#Program",
+              "range_label": "Program",
+              "description": "hasProgram repeats its range Program in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasRating",
+              "property_label": "hasRating",
+              "range_uri": "http://example.org/ontology#Rating",
+              "range_label": "Rating",
+              "description": "hasRating repeats its range Rating in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasReorganization",
+              "property_label": "hasReorganization",
+              "range_uri": "http://example.org/ontology#Reorganization",
+              "range_label": "Reorganization",
+              "description": "hasReorganization repeats its range Reorganization in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasRisk",
+              "property_label": "hasRisk",
+              "range_uri": "http://example.org/ontology#Risk",
+              "range_label": "Risk",
+              "description": "hasRisk repeats its range Risk in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasRole",
+              "property_label": "hasRole",
+              "range_uri": "http://example.org/ontology#Role",
+              "range_label": "Role",
+              "description": "hasRole repeats its range Role in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasSharePrice",
+              "property_label": "hasSharePrice",
+              "range_uri": "http://example.org/ontology#SharePrice",
+              "range_label": "SharePrice",
+              "description": "hasSharePrice repeats its range SharePrice in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasShareholding",
+              "property_label": "hasShareholding",
+              "range_uri": "http://example.org/ontology#Shareholding",
+              "range_label": "Shareholding",
+              "description": "hasShareholding repeats its range Shareholding in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasSolution",
+              "property_label": "hasSolution",
+              "range_uri": "http://example.org/ontology#Solution",
+              "range_label": "Solution",
+              "description": "hasSolution repeats its range Solution in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasTarget",
+              "property_label": "hasTarget",
+              "range_uri": "http://example.org/ontology#Target",
+              "range_label": "Target",
+              "description": "hasTarget repeats its range Target in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#hasWhistleblowingSystem",
+              "property_label": "hasWhistleblowingSystem",
+              "range_uri": "http://example.org/ontology#WhistleblowingSystem",
+              "range_label": "WhistleblowingSystem",
+              "description": "hasWhistleblowingSystem repeats its range WhistleblowingSystem in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#meetsMilestone",
+              "property_label": "meetsMilestone",
+              "range_uri": "http://example.org/ontology#Milestone",
+              "range_label": "Milestone",
+              "description": "meetsMilestone repeats its range Milestone in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#organizesEvent",
+              "property_label": "organizesEvent",
+              "range_uri": "http://example.org/ontology#Event",
+              "range_label": "Event",
+              "description": "organizesEvent repeats its range Event in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#posesRisk",
+              "property_label": "posesRisk",
+              "range_uri": "http://example.org/ontology#Risk",
+              "range_label": "Risk",
+              "description": "posesRisk repeats its range Risk in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#referencesStandard",
+              "property_label": "referencesStandard",
+              "range_uri": "http://example.org/ontology#Standard",
+              "range_label": "Standard",
+              "description": "referencesStandard repeats its range Standard in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#usesMethodology",
+              "property_label": "usesMethodology",
+              "range_uri": "http://example.org/ontology#Methodology",
+              "range_label": "Methodology",
+              "description": "usesMethodology repeats its range Methodology in the property name."
+            },
+            {
+              "property_uri": "http://example.org/ontology#usesPlatform",
+              "property_label": "usesPlatform",
+              "range_uri": "http://example.org/ontology#Platform",
+              "range_label": "Platform",
+              "description": "usesPlatform repeats its range Platform in the property name."
+            }
+          ]
+        }
+      },
+      "P3.3": {
+        "title": "Domain in property title",
+        "result": {
+          "count": 0,
+          "ratio": 0.0,
+          "items": []
+        }
+      }
+    },
+    "Semantic Issues": {
+      "P4.1": {
+        "title": "Overly generic classes",
+        "result": {
+          "count": 11,
+          "ratio": 0.030470914127423823,
+          "items": [
+            {
+              "class_uri": "http://example.org/ontology#AbstractConcept",
+              "class_label": "AbstractConcept",
+              "tokens": [
+                "Abstract",
+                "Concept"
+              ],
+              "distance": 0,
+              "description": "AbstractConcept appears overly generic (distance 0 from top-level concepts)."
+            },
+            {
+              "class_uri": "http://example.org/ontology#BusinessConcept",
+              "class_label": "BusinessConcept",
+              "tokens": [
+                "Business",
+                "Concept"
+              ],
+              "distance": 0,
+              "description": "BusinessConcept appears overly generic (distance 0 from top-level concepts)."
+            },
+            {
+              "class_uri": "http://example.org/ontology#ConcreteEntity",
+              "class_label": "ConcreteEntity",
+              "tokens": [
+                "Concrete",
+                "Entity"
+              ],
+              "distance": 0,
+              "description": "ConcreteEntity appears overly generic (distance 0 from top-level concepts)."
+            },
+            {
+              "class_uri": "http://example.org/ontology#GeopoliticalEntity",
+              "class_label": "GeopoliticalEntity",
+              "tokens": [
+                "Geopolitical",
+                "Entity"
+              ],
+              "distance": 0,
+              "description": "GeopoliticalEntity appears overly generic (distance 0 from top-level concepts)."
+            },
+            {
+              "class_uri": "http://example.org/ontology#GovernanceEntity",
+              "class_label": "GovernanceEntity",
+              "tokens": [
+                "Governance",
+                "Entity"
+              ],
+              "distance": 0,
+              "description": "GovernanceEntity appears overly generic (distance 0 from top-level concepts)."
+            },
+            {
+              "class_uri": "http://example.org/ontology#InformationContentEntity",
+              "class_label": "InformationContentEntity",
+              "tokens": [
+                "Information",
+                "Content",
+                "Entity"
+              ],
+              "distance": 0,
+              "description": "InformationContentEntity appears overly generic (distance 0 from top-level concepts)."
+            },
+            {
+              "class_uri": "http://example.org/ontology#TemporalEntity",
+              "class_label": "TemporalEntity",
+              "tokens": [
+                "Temporal",
+                "Entity"
+              ],
+              "distance": 0,
+              "description": "TemporalEntity appears overly generic (distance 0 from top-level concepts)."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Rule",
+              "class_label": "Rule",
+              "tokens": [
+                "Rule"
+              ],
+              "distance": 1,
+              "description": "Rule appears overly generic (distance 1 from top-level concepts)."
+            },
+            {
+              "class_uri": "http://example.org/ontology#DocumentPart",
+              "class_label": "DocumentPart",
+              "tokens": [
+                "Document",
+                "Part"
+              ],
+              "distance": 2,
+              "description": "DocumentPart appears overly generic (distance 2 from top-level concepts)."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Event",
+              "class_label": "Event",
+              "tokens": [
+                "Event"
+              ],
+              "distance": 2,
+              "description": "Event appears overly generic (distance 2 from top-level concepts)."
+            },
+            {
+              "class_uri": "http://example.org/ontology#Framework",
+              "class_label": "Framework",
+              "tokens": [
+                "Framework"
+              ],
+              "distance": 2,
+              "description": "Framework appears overly generic (distance 2 from top-level concepts)."
+            }
+          ],
+          "distance_buckets": {
+            "0": [
+              "AbstractConcept",
+              "BusinessConcept",
+              "ConcreteEntity",
+              "GeopoliticalEntity",
+              "GovernanceEntity",
+              "InformationContentEntity",
+              "TemporalEntity"
+            ],
+            "1": [
+              "Rule"
+            ],
+            "2": [
+              "DocumentPart",
+              "Event",
+              "Framework"
+            ]
+          }
+        }
+      },
+      "P4.2": {
+        "title": "Synonyms in superclasses",
+        "result": {
+          "threshold": 0.8,
+          "count": 5,
+          "ratio": 0.013850415512465374,
+          "items": [
+            {
+              "class_1_uri": "http://example.org/ontology#RegenerativeAgriculture",
+              "class_1_label": "Regenerative Agriculture",
+              "class_2_uri": "http://example.org/ontology#RegenerativeAgriculturePractice",
+              "class_2_label": "Regenerative Agriculture Practice",
+              "label_similarity": 0.9565082788467407,
+              "description_similarity": 0.7847689390182495,
+              "combined_similarity": 0.8534647226333618,
+              "description": "Regenerative Agriculture and Regenerative Agriculture Practice may be synonyms (combined similarity 0.85)."
+            },
+            {
+              "class_1_uri": "http://example.org/ontology#BoardCommittee",
+              "class_1_label": "Board Committee",
+              "class_2_uri": "http://example.org/ontology#GovernanceCommittee",
+              "class_2_label": "Governance Committee",
+              "label_similarity": 0.8208929300308228,
+              "description_similarity": 0.8685932755470276,
+              "combined_similarity": 0.8495131731033325,
+              "description": "Board Committee and Governance Committee may be synonyms (combined similarity 0.85)."
+            },
+            {
+              "class_1_uri": "http://example.org/ontology#LowCarbonCommercialSolution",
+              "class_1_label": "Low Carbon Commercial Solution",
+              "class_2_uri": "http://example.org/ontology#LowCarbonSolution",
+              "class_2_label": "Low Carbon Solution",
+              "label_similarity": 0.8346728086471558,
+              "description_similarity": 0.8300857543945312,
+              "combined_similarity": 0.8319206237792969,
+              "description": "Low Carbon Commercial Solution and Low Carbon Solution may be synonyms (combined similarity 0.83)."
+            },
+            {
+              "class_1_uri": "http://example.org/ontology#GovernanceBody",
+              "class_1_label": "Governance Body",
+              "class_2_uri": "http://example.org/ontology#GovernanceEntity",
+              "class_2_label": "Governance Entity",
+              "label_similarity": 0.8078453540802002,
+              "description_similarity": 0.8145848512649536,
+              "combined_similarity": 0.8118890523910522,
+              "description": "Governance Body and Governance Entity may be synonyms (combined similarity 0.81)."
+            },
+            {
+              "class_1_uri": "http://example.org/ontology#RenewableElectricity",
+              "class_1_label": "Renewable Electricity",
+              "class_2_uri": "http://example.org/ontology#RenewableEnergy",
+              "class_2_label": "Renewable Energy",
+              "label_similarity": 0.9346120357513428,
+              "description_similarity": 0.7215940952301025,
+              "combined_similarity": 0.8068013191223145,
+              "description": "Renewable Electricity and Renewable Energy may be synonyms (combined similarity 0.81)."
+            }
+          ]
+        }
+      },
+      "P4.3": {
+        "title": "Conflicting hierarchy",
+        "result": {
+          "sim_threshold": 0.1,
+          "polarity_threshold": 0.3,
+          "count": 29,
+          "ratio": 0.08033240997229917,
+          "items": [
+            {
+              "parent_uri": "http://example.org/ontology#Report",
+              "parent_label": "Report",
+              "child_uri": "http://example.org/ontology#UniversalRegistrationDocument",
+              "child_label": "Universal Registration Document",
+              "reason": "low similarity",
+              "similarity": 0.0513806976377964,
+              "polarity_distance": 0.0,
+              "description": "Universal Registration Document may conflict with parent Report (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Wrongdoing",
+              "parent_label": "Wrongdoing",
+              "child_uri": "http://example.org/ontology#AssetProtection",
+              "child_label": "Asset Protection",
+              "reason": "low similarity",
+              "similarity": 0.08591819554567337,
+              "polarity_distance": 0.1806,
+              "description": "Asset Protection may conflict with parent Wrongdoing (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Wrongdoing",
+              "parent_label": "Wrongdoing",
+              "child_uri": "http://example.org/ontology#ParallelDistribution",
+              "child_label": "Parallel Distribution",
+              "reason": "low similarity",
+              "similarity": 0.005860455334186554,
+              "polarity_distance": 0.0,
+              "description": "Parallel Distribution may conflict with parent Wrongdoing (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Process",
+              "parent_label": "Process",
+              "child_uri": "http://example.org/ontology#RegenerativeAgriculturePractice",
+              "child_label": "Regenerative Agriculture Practice",
+              "reason": "low similarity",
+              "similarity": 0.08684538304805756,
+              "polarity_distance": 0.0,
+              "description": "Regenerative Agriculture Practice may conflict with parent Process (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#AbstractConcept",
+              "parent_label": "Abstract Concept",
+              "child_uri": "http://example.org/ontology#Index",
+              "child_label": "Index",
+              "reason": "low similarity",
+              "similarity": 0.07831120491027832,
+              "polarity_distance": 0.0,
+              "description": "Index may conflict with parent Abstract Concept (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#AbstractConcept",
+              "parent_label": "Abstract Concept",
+              "child_uri": "http://example.org/ontology#Plan",
+              "child_label": "Plan",
+              "reason": "low similarity",
+              "similarity": 0.08846685290336609,
+              "polarity_distance": 0.0,
+              "description": "Plan may conflict with parent Abstract Concept (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Service",
+              "parent_label": "Service",
+              "child_uri": "http://example.org/ontology#BusinessSector",
+              "child_label": "Business Sector",
+              "reason": "antonym 'disservice' similar to second label",
+              "similarity": 0.3967011570930481,
+              "polarity_distance": 0.0,
+              "description": "Business Sector may conflict with parent Service (antonym 'disservice' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Service",
+              "parent_label": "Service",
+              "child_uri": "http://example.org/ontology#DigitalService",
+              "child_label": "Digital Service",
+              "reason": "antonym 'disservice' similar to second label",
+              "similarity": 0.6555994153022766,
+              "polarity_distance": 0.0,
+              "description": "Digital Service may conflict with parent Service (antonym 'disservice' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Service",
+              "parent_label": "Service",
+              "child_uri": "http://example.org/ontology#Engineering",
+              "child_label": "Engineering",
+              "reason": "antonym 'disservice' similar to second label",
+              "similarity": 0.2657391130924225,
+              "polarity_distance": 0.0,
+              "description": "Engineering may conflict with parent Service (antonym 'disservice' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Service",
+              "parent_label": "Service",
+              "child_uri": "http://example.org/ontology#Healthcare",
+              "child_label": "Healthcare",
+              "reason": "antonym 'disservice' similar to second label",
+              "similarity": 0.4714551270008087,
+              "polarity_distance": 0.0,
+              "description": "Healthcare may conflict with parent Service (antonym 'disservice' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Service",
+              "parent_label": "Service",
+              "child_uri": "http://example.org/ontology#Maintenance",
+              "child_label": "Maintenance",
+              "reason": "antonym 'disservice' similar to second label",
+              "similarity": 0.5162510871887207,
+              "polarity_distance": 0.0,
+              "description": "Maintenance may conflict with parent Service (antonym 'disservice' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Situation",
+              "parent_label": "Situation",
+              "child_uri": "http://example.org/ontology#Shareholding",
+              "child_label": "Shareholding",
+              "reason": "low similarity",
+              "similarity": 0.07870525121688843,
+              "polarity_distance": 0.0,
+              "description": "Shareholding may conflict with parent Situation (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#HumanRightsImpact",
+              "parent_label": "Human Rights Impact",
+              "child_uri": "http://example.org/ontology#Violence",
+              "child_label": "Violence",
+              "reason": "opposite polarity",
+              "similarity": 0.32523399591445923,
+              "polarity_distance": 0.31245,
+              "description": "Violence may conflict with parent Human Rights Impact (opposite polarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Place",
+              "parent_label": "Place",
+              "child_uri": "http://example.org/ontology#City",
+              "child_label": "City",
+              "reason": "antonym 'divest' similar to second label",
+              "similarity": 0.5579471588134766,
+              "polarity_distance": 0.0,
+              "description": "City may conflict with parent Place (antonym 'divest' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Place",
+              "parent_label": "Place",
+              "child_uri": "http://example.org/ontology#Facility",
+              "child_label": "Facility",
+              "reason": "antonym 'divest' similar to second label",
+              "similarity": 0.6467349529266357,
+              "polarity_distance": 0.0,
+              "description": "Facility may conflict with parent Place (antonym 'divest' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Place",
+              "parent_label": "Place",
+              "child_uri": "http://example.org/ontology#Park",
+              "child_label": "Park",
+              "reason": "antonym 'divest' similar to second label",
+              "similarity": 0.4913173019886017,
+              "polarity_distance": 0.0,
+              "description": "Park may conflict with parent Place (antonym 'divest' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Place",
+              "parent_label": "Place",
+              "child_uri": "http://example.org/ontology#Site",
+              "child_label": "Site",
+              "reason": "antonym 'divest' similar to second label",
+              "similarity": 0.5036076307296753,
+              "polarity_distance": 0.0,
+              "description": "Site may conflict with parent Place (antonym 'divest' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Engineering",
+              "parent_label": "Engineering",
+              "child_uri": "http://example.org/ontology#Refrigeration",
+              "child_label": "Refrigeration",
+              "reason": "low similarity",
+              "similarity": 0.08732788264751434,
+              "polarity_distance": 0.0,
+              "description": "Refrigeration may conflict with parent Engineering (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Topic",
+              "parent_label": "Topic",
+              "child_uri": "http://example.org/ontology#DeforestationFreePrimarySupplyChain",
+              "child_label": "Deforestation Free Primary Supply Chain",
+              "reason": "low similarity",
+              "similarity": 0.0022703688591718674,
+              "polarity_distance": 0.2553,
+              "description": "Deforestation Free Primary Supply Chain may conflict with parent Topic (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Topic",
+              "parent_label": "Topic",
+              "child_uri": "http://example.org/ontology#GhgEmissions",
+              "child_label": "Ghg Emissions",
+              "reason": "low similarity",
+              "similarity": 0.08854897320270538,
+              "polarity_distance": 0.0,
+              "description": "Ghg Emissions may conflict with parent Topic (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Topic",
+              "parent_label": "Topic",
+              "child_uri": "http://example.org/ontology#RegenerativeAgriculture",
+              "child_label": "Regenerative Agriculture",
+              "reason": "low similarity",
+              "similarity": 0.058068156242370605,
+              "polarity_distance": 0.0,
+              "description": "Regenerative Agriculture may conflict with parent Topic (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Topic",
+              "parent_label": "Topic",
+              "child_uri": "http://example.org/ontology#UnhealthyDiet",
+              "child_label": "Unhealthy Diet",
+              "reason": "low similarity",
+              "similarity": 0.022340744733810425,
+              "polarity_distance": 0.26335,
+              "description": "Unhealthy Diet may conflict with parent Topic (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#IntangibleProduct",
+              "parent_label": "Intangible Product",
+              "child_uri": "http://example.org/ontology#Offer",
+              "child_label": "Offer",
+              "reason": "low similarity",
+              "similarity": 0.07811704277992249,
+              "polarity_distance": 0.0,
+              "description": "Offer may conflict with parent Intangible Product (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#IntangibleProduct",
+              "parent_label": "Intangible Product",
+              "child_uri": "http://example.org/ontology#Platform",
+              "child_label": "Platform",
+              "reason": "low similarity",
+              "similarity": 0.06955812126398087,
+              "polarity_distance": 0.0,
+              "description": "Platform may conflict with parent Intangible Product (low similarity)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Corruption",
+              "parent_label": "Corruption",
+              "child_uri": "http://example.org/ontology#FacilitationPayment",
+              "child_label": "Facilitation Payment",
+              "reason": "antonym 'incorruptness' similar to second label",
+              "similarity": 0.16863000392913818,
+              "polarity_distance": 0.0,
+              "description": "Facilitation Payment may conflict with parent Corruption (antonym 'incorruptness' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Corruption",
+              "parent_label": "Corruption",
+              "child_uri": "http://example.org/ontology#InfluencePeddling",
+              "child_label": "Influence Peddling",
+              "reason": "antonym 'incorruptness' similar to second label",
+              "similarity": 0.3035958409309387,
+              "polarity_distance": 0.0,
+              "description": "Influence Peddling may conflict with parent Corruption (antonym 'incorruptness' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Agreement",
+              "parent_label": "Agreement",
+              "child_uri": "http://example.org/ontology#FrameworkAgreement",
+              "child_label": "Framework Agreement",
+              "reason": "antonym 'disagreement' similar to second label",
+              "similarity": 0.5877948999404907,
+              "polarity_distance": 0.0,
+              "description": "Framework Agreement may conflict with parent Agreement (antonym 'disagreement' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Agreement",
+              "parent_label": "Agreement",
+              "child_uri": "http://example.org/ontology#InternationalAgreement",
+              "child_label": "International Agreement",
+              "reason": "antonym 'disagreement' similar to second label",
+              "similarity": 0.6934036016464233,
+              "polarity_distance": 0.0,
+              "description": "International Agreement may conflict with parent Agreement (antonym 'disagreement' similar to second label)."
+            },
+            {
+              "parent_uri": "http://example.org/ontology#Agreement",
+              "parent_label": "Agreement",
+              "child_uri": "http://example.org/ontology#PowerPurchaseAgreement",
+              "child_label": "Power Purchase Agreement",
+              "reason": "antonym 'disagreement' similar to second label",
+              "similarity": 0.5280667543411255,
+              "polarity_distance": 0.0,
+              "description": "Power Purchase Agreement may conflict with parent Agreement (antonym 'disagreement' similar to second label)."
+            }
+          ]
+        }
+      },
+      "P4.4": {
+        "title": "Subclasses with same semantics as superclasses",
+        "result": {
+          "sim_threshold": 0.8,
+          "count": 1,
+          "ratio": 0.002770083102493075,
+          "items": [
+            {
+              "parent_uri": "http://example.org/ontology#GovernanceEntity",
+              "child_uri": "http://example.org/ontology#GovernanceBody",
+              "parent_label": "Governance Entity",
+              "child_label": "Governance Body",
+              "semantic_similarity": 0.8118890523910522,
+              "shared_domain_count": 0,
+              "shared_range_count": 0,
+              "shared_domain_props": [],
+              "shared_range_props": [],
+              "description": "Governance Body is semantically very close to parent Governance Entity (similarity 0.81)."
+            }
+          ]
+        }
+      },
+      "P4.5": {
+        "title": "Synonyms in properties",
+        "result": {
+          "threshold": 0.8,
+          "quantiles": {
+            "q90": 0.35330383479595184,
+            "q95": 0.4071572721004486,
+            "q98": 0.4817990452051166,
+            "q99": 0.5361116975545883
+          },
+          "total_count": 18,
+          "returned_count": 18,
+          "ratio": 0.05921052631578947,
+          "items": [
+            {
+              "p1_uri": "http://example.org/ontology#hasAffordableMicronutrientFortifiedServings",
+              "p2_uri": "http://example.org/ontology#hasMicronutrientFortifiedServings",
+              "p1_label": "has Affordable Micronutrient Fortified Servings",
+              "p2_label": "has Micronutrient Fortified Servings",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.9590890407562256,
+              "description_similarity": 0.8396146297454834,
+              "combined_similarity": 0.9232467412948608,
+              "description": "has Affordable Micronutrient Fortified Servings and has Micronutrient Fortified Servings may be synonymous properties (combined similarity 0.92)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasRenewableEnergyShare",
+              "p2_uri": "http://example.org/ontology#hasRenewableEnergyShareValue",
+              "p1_label": "has Renewable Energy Share",
+              "p2_label": "has Renewable Energy Share Value",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.9251253604888916,
+              "description_similarity": 0.8719402551651001,
+              "combined_similarity": 0.9091697931289673,
+              "description": "has Renewable Energy Share and has Renewable Energy Share Value may be synonymous properties (combined similarity 0.91)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasGhgNetReduction",
+              "p2_uri": "http://example.org/ontology#hasGhgReduction",
+              "p1_label": "has Ghg Net Reduction",
+              "p2_label": "has Ghg Reduction",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.891207218170166,
+              "description_similarity": 0.9466100931167603,
+              "combined_similarity": 0.9078280925750732,
+              "description": "has Ghg Net Reduction and has Ghg Reduction may be synonymous properties (combined similarity 0.91)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasNetGhgEmissions",
+              "p2_uri": "http://example.org/ontology#hasTotalGhgEmissions",
+              "p1_label": "has Net Ghg Emissions",
+              "p2_label": "has Total Ghg Emissions",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.8812208771705627,
+              "description_similarity": 0.8885207176208496,
+              "combined_similarity": 0.8834108114242554,
+              "description": "has Net Ghg Emissions and has Total Ghg Emissions may be synonymous properties (combined similarity 0.88)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasChemicalOxygenDemandConcentration",
+              "p2_uri": "http://example.org/ontology#hasChemicalOxygenDemandOutput",
+              "p1_label": "has Chemical Oxygen Demand Concentration",
+              "p2_label": "has Chemical Oxygen Demand Output",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.9041962623596191,
+              "description_similarity": 0.7903448343276978,
+              "combined_similarity": 0.8700408339500427,
+              "description": "has Chemical Oxygen Demand Concentration and has Chemical Oxygen Demand Output may be synonymous properties (combined similarity 0.87)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasSubsidiary",
+              "p2_uri": "http://example.org/ontology#isSubsidiaryOf",
+              "p1_label": "has Subsidiary",
+              "p2_label": "is Subsidiary Of",
+              "p1_type": "ObjectProperty",
+              "p2_type": "ObjectProperty",
+              "label_similarity": 0.8735413551330566,
+              "description_similarity": 0.8569415211677551,
+              "combined_similarity": 0.8685613870620728,
+              "description": "has Subsidiary and is Subsidiary Of may be synonymous properties (combined similarity 0.87)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasGhgReduction",
+              "p2_uri": "http://example.org/ontology#hasGhgReductionTarget",
+              "p1_label": "has Ghg Reduction",
+              "p2_label": "has Ghg Reduction Target",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.9300625324249268,
+              "description_similarity": 0.674189567565918,
+              "combined_similarity": 0.8533006310462952,
+              "description": "has Ghg Reduction and has Ghg Reduction Target may be synonymous properties (combined similarity 0.85)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasFossilFuelPercentage",
+              "p2_uri": "http://example.org/ontology#hasFossilFuelShare",
+              "p1_label": "has Fossil Fuel Percentage",
+              "p2_label": "has Fossil Fuel Share",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.8204113245010376,
+              "description_similarity": 0.8979965448379517,
+              "combined_similarity": 0.8436868786811829,
+              "description": "has Fossil Fuel Percentage and has Fossil Fuel Share may be synonymous properties (combined similarity 0.84)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasInvestee",
+              "p2_uri": "http://example.org/ontology#hasInvestor",
+              "p1_label": "has Investee",
+              "p2_label": "has Investor",
+              "p1_type": "ObjectProperty",
+              "p2_type": "ObjectProperty",
+              "label_similarity": 0.7793393731117249,
+              "description_similarity": 0.9771536588668823,
+              "combined_similarity": 0.8386836051940918,
+              "description": "has Investee and has Investor may be synonymous properties (combined similarity 0.84)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasAdditionalMemberCount",
+              "p2_uri": "http://example.org/ontology#hasMemberCount",
+              "p1_label": "has Additional Member Count",
+              "p2_label": "has Member Count",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.9169560074806213,
+              "description_similarity": 0.6061667799949646,
+              "combined_similarity": 0.8237192630767822,
+              "description": "has Additional Member Count and has Member Count may be synonymous properties (combined similarity 0.82)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasNumberOfEmployees",
+              "p2_uri": "http://example.org/ontology#hasTotalEmployees",
+              "p1_label": "has Number Of Employees",
+              "p2_label": "has Total Employees",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.8465003967285156,
+              "description_similarity": 0.7654135823249817,
+              "combined_similarity": 0.8221743702888489,
+              "description": "has Number Of Employees and has Total Employees may be synonymous properties (combined similarity 0.82)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasCeo",
+              "p2_uri": "http://example.org/ontology#hasDeputyCeo",
+              "p1_label": "has Ceo",
+              "p2_label": "has Deputy Ceo",
+              "p1_type": "ObjectProperty",
+              "p2_type": "ObjectProperty",
+              "label_similarity": 0.7905591726303101,
+              "description_similarity": 0.8906245827674866,
+              "combined_similarity": 0.8205788135528564,
+              "description": "has Ceo and has Deputy Ceo may be synonymous properties (combined similarity 0.82)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasWaterConsumedInHighStressRegions",
+              "p2_uri": "http://example.org/ontology#hasWaterWithdrawnInHighStressRegions",
+              "p1_label": "has Water Consumed In High Stress Regions",
+              "p2_label": "has Water Withdrawn In High Stress Regions",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.7837058305740356,
+              "description_similarity": 0.8846954107284546,
+              "combined_similarity": 0.8140026926994324,
+              "description": "has Water Consumed In High Stress Regions and has Water Withdrawn In High Stress Regions may be synonymous properties (combined similarity 0.81)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasFirstPublicationYear",
+              "p2_uri": "http://example.org/ontology#hasPublicationYear",
+              "p1_label": "has First Publication Year",
+              "p2_label": "has Publication Year",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.8840771913528442,
+              "description_similarity": 0.6466095447540283,
+              "combined_similarity": 0.8128368854522705,
+              "description": "has First Publication Year and has Publication Year may be synonymous properties (combined similarity 0.81)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasRenewableElectricityAchievement",
+              "p2_uri": "http://example.org/ontology#hasRenewableElectricityTarget",
+              "p1_label": "has Renewable Electricity Achievement",
+              "p2_label": "has Renewable Electricity Target",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.8568862676620483,
+              "description_similarity": 0.6959900856018066,
+              "combined_similarity": 0.8086174130439758,
+              "description": "has Renewable Electricity Achievement and has Renewable Electricity Target may be synonymous properties (combined similarity 0.81)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#hasUpdateDate",
+              "p2_uri": "http://example.org/ontology#hasUpdateYear",
+              "p1_label": "has Update Date",
+              "p2_label": "has Update Year",
+              "p1_type": "DatatypeProperty",
+              "p2_type": "DatatypeProperty",
+              "label_similarity": 0.7546496391296387,
+              "description_similarity": 0.9193000793457031,
+              "combined_similarity": 0.804044783115387,
+              "description": "has Update Date and has Update Year may be synonymous properties (combined similarity 0.80)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#isSubjectOf",
+              "p2_uri": "http://example.org/ontology#wasSubjectOf",
+              "p1_label": "is Subject Of",
+              "p2_label": "was Subject Of",
+              "p1_type": "ObjectProperty",
+              "p2_type": "ObjectProperty",
+              "label_similarity": 0.9020083546638489,
+              "description_similarity": 0.5691589117050171,
+              "combined_similarity": 0.8021535277366638,
+              "description": "is Subject Of and was Subject Of may be synonymous properties (combined similarity 0.80)."
+            },
+            {
+              "p1_uri": "http://example.org/ontology#isAuditOf",
+              "p2_uri": "http://example.org/ontology#isAuditedBy",
+              "p1_label": "is Audit Of",
+              "p2_label": "is Audited By",
+              "p1_type": "ObjectProperty",
+              "p2_type": "ObjectProperty",
+              "label_similarity": 0.8794873952865601,
+              "description_similarity": 0.6175140738487244,
+              "combined_similarity": 0.8008953928947449,
+              "description": "is Audit Of and is Audited By may be synonymous properties (combined similarity 0.80)."
+            }
+          ]
+        }
+      },
+      "P4.6": {
+        "title": "Inverse properties not declared",
+        "result": {
+          "threshold": 0.8,
+          "count": 1,
+          "ratio": 0.003289473684210526,
+          "items": [
+            {
+              "p1_uri": "http://example.org/ontology#hasSubsidiary",
+              "p2_uri": "http://example.org/ontology#isSubsidiaryOf",
+              "p1_label": "has Subsidiary",
+              "p2_label": "is Subsidiary Of",
+              "combined_similarity": 0.8685613870620728,
+              "domain_swapped": true,
+              "p1_domain": [
+                "Company"
+              ],
+              "p1_range": [
+                "Company"
+              ],
+              "p2_domain": [
+                "Company"
+              ],
+              "p2_range": [
+                "Company"
+              ],
+              "description": "has Subsidiary and is Subsidiary Of may be undeclared inverse properties with swapped domain/range (similarity 0.87)."
+            }
+          ]
+        }
+      },
+      "P4.7": {
+        "title": "DataProperties that can become ObjectProperties",
+        "result": {
+          "count": 5,
+          "ratio": 0.035211267605633804,
+          "items": [
+            {
+              "short_uri": "http://example.org/ontology#hasDate",
+              "long_uri": "http://example.org/ontology#hasDateString",
+              "short_label": "hasDate",
+              "long_label": "hasDateString",
+              "description": "hasDate overlaps with hasDateString and may hide an object-property relation."
+            },
+            {
+              "short_uri": "http://example.org/ontology#hasGhgReduction",
+              "long_uri": "http://example.org/ontology#hasGhgReductionTarget",
+              "short_label": "hasGhgReduction",
+              "long_label": "hasGhgReductionTarget",
+              "description": "hasGhgReduction overlaps with hasGhgReductionTarget and may hide an object-property relation."
+            },
+            {
+              "short_uri": "http://example.org/ontology#hasRenewableEnergyShare",
+              "long_uri": "http://example.org/ontology#hasRenewableEnergyShareValue",
+              "short_label": "hasRenewableEnergyShare",
+              "long_label": "hasRenewableEnergyShareValue",
+              "description": "hasRenewableEnergyShare overlaps with hasRenewableEnergyShareValue and may hide an object-property relation."
+            },
+            {
+              "short_uri": "http://example.org/ontology#hasScope",
+              "long_uri": "http://example.org/ontology#hasScopeThreeFlagGhgReductionTarget",
+              "short_label": "hasScope",
+              "long_label": "hasScopeThreeFlagGhgReductionTarget",
+              "description": "hasScope overlaps with hasScopeThreeFlagGhgReductionTarget and may hide an object-property relation."
+            },
+            {
+              "short_uri": "http://example.org/ontology#hasYear",
+              "long_uri": "http://example.org/ontology#hasYearMonth",
+              "short_label": "hasYear",
+              "long_label": "hasYearMonth",
+              "description": "hasYear overlaps with hasYearMonth and may hide an object-property relation."
+            }
+          ]
+        }
+      }
+    }
+  }
+}
