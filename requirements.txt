@@ -12,3 +12,5 @@ accelerate
 sentencepiece
 torch
 owlready2
+fastapi
+uvicorn

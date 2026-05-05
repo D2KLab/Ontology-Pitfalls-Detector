@@ -138,6 +138,59 @@ subset_results = toolkit.run_patterns(["P1.1", "P2.3", "P4.6"])
 all_results = toolkit.run_all()
 ```
 
+## HTTP API Usage
+
+The project now includes a FastAPI server in [api.py](api.py).
+
+Start the API:
+
+```bash
+python api.py
+```
+
+Open interactive docs:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+Health check:
+
+```bash
+curl -s http://127.0.0.1:8000/health
+```
+
+Get taxonomy (`P1.1` to `P4.7`):
+
+```bash
+curl -s http://127.0.0.1:8000/taxonomy
+```
+
+Analyze an ontology with selected pitfalls:
+
+```bash
+curl -s -X POST http://127.0.0.1:8000/analyze \
+  -H "Content-Type: application/json" \
+  -d '{
+    "ontology": "data/red-otkv3.ttl",
+    "patterns": ["P1.1", "P2.3", "P4.6"],
+    "model": "all-MiniLM-L6-v2",
+    "include_grouped_results": true,
+    "include_descriptions": true
+  }'
+```
+
+Run all pitfalls:
+
+```bash
+curl -s -X POST http://127.0.0.1:8000/analyze \
+  -H "Content-Type: application/json" \
+  -d '{
+    "ontology": "data/red-otkv3.ttl",
+    "patterns": ["all"]
+  }'
+```
+
 ## Output Format
 
 CLI responses are JSON with this structure:
